@@ -1,0 +1,37 @@
+//
+//  OCRTool.pch
+//  OCRTool
+//
+//  Created by Jae sun on 2018/10/29.
+//  Copyright © 2018年 Jaesun. All rights reserved.
+//
+
+#ifndef OCRTool_pch
+#define OCRTool_pch
+
+// App
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//获取导航栏+状态栏的高度
+#define kHeightForNavBarAndStatusBar self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+// weakSelf
+#define SJWeakSelf __weak typeof(self) weakSelf = self;
+// Category
+#import "UIColor+Expanded.h"
+#import "UIColor+HSV.h"
+#import "UIImage+SJCategory.h"
+
+// Custom
+#import "SJCustomAlertController.h"
+
+// Vendor
+#import "Masonry.h"
+#import <AipOcrSdk/AipOcrSdk.h>
+#import "ZZJBlockBarButtonItem.h"
+#import "FFDropDownMenuView.h"
+#import <UMShare/UMShare.h>
+
+// Utils
+#import "SJColorUtil.h"
+
+#endif /* OCRTool_pch */

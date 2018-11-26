@@ -1,0 +1,1210 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */; };
+		3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */; };
+		4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */; };
+		4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE20219DB19400FC0DA8 /* SJView.m */; };
+		4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */; };
+		4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */; };
+		4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */; };
+		4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D4C21AC2B95008C9DEF /* SJCustomAlertController.m */; };
+		4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */; };
+		4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */; };
+		4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */; };
+		4B454D6121AC4240008C9DEF /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D6021AC4240008C9DEF /* SJInputToolBar.m */; };
+		4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C5A21869E590069EE8F /* AppDelegate.m */; };
+		4B518C6321869E590069EE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B518C6221869E590069EE8F /* Assets.xcassets */; };
+		4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B518C6421869E590069EE8F /* LaunchScreen.storyboard */; };
+		4B518C6921869E590069EE8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C6821869E590069EE8F /* main.m */; };
+		4B518C7321869E590069EE8F /* OCRToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C7221869E590069EE8F /* OCRToolTests.m */; };
+		4B518C7E21869E590069EE8F /* OCRToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C7D21869E590069EE8F /* OCRToolUITests.m */; };
+		4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C8F21869EDA0069EE8F /* OTHomeController.m */; };
+		4B518C952186BA040069EE8F /* SJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C942186BA040069EE8F /* SJViewController.m */; };
+		4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C9A2186BCAF0069EE8F /* SJViewModel.m */; };
+		4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CAE2186C8840069EE8F /* SJCollectionViewCell.m */; };
+		4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B518CAF2186C8840069EE8F /* SJCollectionViewCell.xib */; };
+		4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */; };
+		4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB92186F5E30069EE8F /* UIColor+HSV.m */; };
+		4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */; };
+		4B7A566C21913A3700035EF2 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; };
+		4B7A566D21913A3700035EF2 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B7A566E21913A3700035EF2 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5667219138B700035EF2 /* AipOcrSdk.framework */; };
+		4B7A566F21913A3700035EF2 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5667219138B700035EF2 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B7A567021913A3700035EF2 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5668219138B700035EF2 /* IdcardQuality.framework */; };
+		4B7A567121913A3700035EF2 /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5668219138B700035EF2 /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A567621913EA800035EF2 /* SJColorUtil.m */; };
+		4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A567821914D2F00035EF2 /* OTHomeViewModel.m */; };
+		4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A567C2191565200035EF2 /* OTHomeMenuModel.m */; };
+		4B7A56822191566C00035EF2 /* SJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A56812191566C00035EF2 /* SJModel.m */; };
+		4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9131702186FC4200580F95 /* SJCollectionReusableView.m */; };
+		4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9131712186FC4200580F95 /* SJCollectionReusableView.xib */; };
+		4B9131822187092600580F95 /* SJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9131802187092600580F95 /* SJTableViewCell.m */; };
+		4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9131812187092600580F95 /* SJTableViewCell.xib */; };
+		4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD016821A2EE2200413B14 /* OTResultController.m */; };
+		4BBD016F21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */; };
+		738E6B4F30B9C05E1EA366F0 /* Pods_OCRToolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B518C6F21869E590069EE8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B518C4E21869E590069EE8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B518C5521869E590069EE8F;
+			remoteInfo = OCRTool;
+		};
+		4B518C7A21869E590069EE8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B518C4E21869E590069EE8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B518C5521869E590069EE8F;
+			remoteInfo = OCRTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B7A567221913A3700035EF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B7A566D21913A3700035EF2 /* AipBase.framework in Embed Frameworks */,
+				4B7A566F21913A3700035EF2 /* AipOcrSdk.framework in Embed Frameworks */,
+				4B7A567121913A3700035EF2 /* IdcardQuality.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool.debug.xcconfig"; sourceTree = "<group>"; };
+		434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1BCE1C219DB18100FC0DA8 /* OTHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeView.h; sourceTree = "<group>"; };
+		4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeView.m; sourceTree = "<group>"; };
+		4B1BCE1F219DB19400FC0DA8 /* SJView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJView.h; sourceTree = "<group>"; };
+		4B1BCE20219DB19400FC0DA8 /* SJView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJView.m; sourceTree = "<group>"; };
+		4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJWebViewController.m; sourceTree = "<group>"; };
+		4B454D3821AC2A6F008C9DEF /* SJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJWebViewController.h; sourceTree = "<group>"; };
+		4B454D3C21AC2B10008C9DEF /* SJShareAlertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJShareAlertCell.h; sourceTree = "<group>"; };
+		4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJShareAlertView.m; sourceTree = "<group>"; };
+		4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJShareAlertCell.m; sourceTree = "<group>"; };
+		4B454D3F21AC2B10008C9DEF /* SJShareAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJShareAlertView.h; sourceTree = "<group>"; };
+		4B454D4C21AC2B95008C9DEF /* SJCustomAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCustomAlertController.m; sourceTree = "<group>"; };
+		4B454D4D21AC2B95008C9DEF /* SJPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPresentationController.h; sourceTree = "<group>"; };
+		4B454D4E21AC2B95008C9DEF /* SJCustomAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCustomAlertController.h; sourceTree = "<group>"; };
+		4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPresentationController.m; sourceTree = "<group>"; };
+		4B454D5821AC2D27008C9DEF /* UIImage+SJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+SJCategory.h"; path = "OCRTool/Class/Category/UIImage+SJCategroy/UIImage+SJCategory.h"; sourceTree = SOURCE_ROOT; };
+		4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SJCategory.m"; path = "OCRTool/Class/Category/UIImage+SJCategroy/UIImage+SJCategory.m"; sourceTree = SOURCE_ROOT; };
+		4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCoreDataUtil.m; sourceTree = "<group>"; };
+		4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCoreDataUtil.h; sourceTree = "<group>"; };
+		4B454D5F21AC4240008C9DEF /* SJInputToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
+		4B454D6021AC4240008C9DEF /* SJInputToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
+		4B518C5621869E590069EE8F /* OCRTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B518C5921869E590069EE8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B518C5A21869E590069EE8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B518C6221869E590069EE8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B518C6521869E590069EE8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B518C6721869E590069EE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B518C6821869E590069EE8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B518C6E21869E590069EE8F /* OCRToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCRToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B518C7221869E590069EE8F /* OCRToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCRToolTests.m; sourceTree = "<group>"; };
+		4B518C7421869E590069EE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B518C7921869E590069EE8F /* OCRToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCRToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B518C7D21869E590069EE8F /* OCRToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCRToolUITests.m; sourceTree = "<group>"; };
+		4B518C7F21869E590069EE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B518C8E21869EDA0069EE8F /* OTHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeController.h; sourceTree = "<group>"; };
+		4B518C8F21869EDA0069EE8F /* OTHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeController.m; sourceTree = "<group>"; };
+		4B518C932186BA040069EE8F /* SJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJViewController.h; sourceTree = "<group>"; };
+		4B518C942186BA040069EE8F /* SJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJViewController.m; sourceTree = "<group>"; };
+		4B518C992186BCAF0069EE8F /* SJViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJViewModel.h; sourceTree = "<group>"; };
+		4B518C9A2186BCAF0069EE8F /* SJViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJViewModel.m; sourceTree = "<group>"; };
+		4B518C9C2186BCC40069EE8F /* OTHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeViewModel.h; sourceTree = "<group>"; };
+		4B518CAA2186C6C10069EE8F /* OCRTool.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCRTool.pch; sourceTree = "<group>"; };
+		4B518CAD2186C8840069EE8F /* SJCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollectionViewCell.h; sourceTree = "<group>"; };
+		4B518CAE2186C8840069EE8F /* SJCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollectionViewCell.m; sourceTree = "<group>"; };
+		4B518CAF2186C8840069EE8F /* SJCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollectionViewCell.xib; sourceTree = "<group>"; };
+		4B518CB22186C8BD0069EE8F /* OTHomeCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeCollectionCell.h; sourceTree = "<group>"; };
+		4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeCollectionCell.m; sourceTree = "<group>"; };
+		4B518CB92186F5E30069EE8F /* UIColor+HSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSV.m"; sourceTree = "<group>"; };
+		4B518CBA2186F5E30069EE8F /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		4B518CBC2186F5E30069EE8F /* UIColor+HSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSV.h"; sourceTree = "<group>"; };
+		4B7A5666219138B700035EF2 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		4B7A5667219138B700035EF2 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
+		4B7A5668219138B700035EF2 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
+		4B7A567521913EA800035EF2 /* SJColorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJColorUtil.h; sourceTree = "<group>"; };
+		4B7A567621913EA800035EF2 /* SJColorUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJColorUtil.m; sourceTree = "<group>"; };
+		4B7A567821914D2F00035EF2 /* OTHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTHomeViewModel.m; sourceTree = "<group>"; };
+		4B7A567B2191565200035EF2 /* OTHomeMenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeMenuModel.h; sourceTree = "<group>"; };
+		4B7A567C2191565200035EF2 /* OTHomeMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeMenuModel.m; sourceTree = "<group>"; };
+		4B7A56802191566C00035EF2 /* SJModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJModel.h; sourceTree = "<group>"; };
+		4B7A56812191566C00035EF2 /* SJModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJModel.m; sourceTree = "<group>"; };
+		4B91316F2186FC4200580F95 /* SJCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCollectionReusableView.h; sourceTree = "<group>"; };
+		4B9131702186FC4200580F95 /* SJCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCollectionReusableView.m; sourceTree = "<group>"; };
+		4B9131712186FC4200580F95 /* SJCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollectionReusableView.xib; sourceTree = "<group>"; };
+		4B91317F2187092600580F95 /* SJTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewCell.h; sourceTree = "<group>"; };
+		4B9131802187092600580F95 /* SJTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewCell.m; sourceTree = "<group>"; };
+		4B9131812187092600580F95 /* SJTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJTableViewCell.xib; sourceTree = "<group>"; };
+		4BBD016721A2EE2200413B14 /* OTResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTResultController.h; sourceTree = "<group>"; };
+		4BBD016821A2EE2200413B14 /* OTResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTResultController.m; sourceTree = "<group>"; };
+		4BBD016D21A2F3BC00413B14 /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
+		4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZJBlockBarButtonItem.m; sourceTree = "<group>"; };
+		58BE2E1321AF301CC364AF4D /* Pods-OCRToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRToolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRToolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AECDD46D8B41958276286E /* Pods-OCRToolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FEEA27254038C8A3B39015D4 /* Pods-OCRTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B518C5321869E590069EE8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B7A566C21913A3700035EF2 /* AipBase.framework in Frameworks */,
+				26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */,
+				4B7A567021913A3700035EF2 /* IdcardQuality.framework in Frameworks */,
+				4B7A566E21913A3700035EF2 /* AipOcrSdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C6B21869E590069EE8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C7621869E590069EE8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				738E6B4F30B9C05E1EA366F0 /* Pods_OCRToolUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B454D4221AC2B1A008C9DEF /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D4321AC2B23008C9DEF /* SJCustomAlert */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		4B454D4321AC2B23008C9DEF /* SJCustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D4B21AC2B80008C9DEF /* Views */,
+				4B454D4421AC2B38008C9DEF /* Controllers */,
+			);
+			path = SJCustomAlert;
+			sourceTree = "<group>";
+		};
+		4B454D4421AC2B38008C9DEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D4E21AC2B95008C9DEF /* SJCustomAlertController.h */,
+				4B454D4C21AC2B95008C9DEF /* SJCustomAlertController.m */,
+				4B454D4D21AC2B95008C9DEF /* SJPresentationController.h */,
+				4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B454D4B21AC2B80008C9DEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D5821AC2D27008C9DEF /* UIImage+SJCategory.h */,
+				4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */,
+			);
+			name = "UIImage+SJCategroy";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */,
+				4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */,
+			);
+			path = SJCoreDataUtil;
+			sourceTree = "<group>";
+		};
+		4B518C4D21869E590069EE8F = {
+			isa = PBXGroup;
+			children = (
+				4B518C5821869E590069EE8F /* OCRTool */,
+				4B518C7121869E590069EE8F /* OCRToolTests */,
+				4B518C7C21869E590069EE8F /* OCRToolUITests */,
+				4B518C5721869E590069EE8F /* Products */,
+				98402D447F550961F5EDC70F /* Pods */,
+				BF5EB1F3D7D9D539283B1B92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B518C5721869E590069EE8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C5621869E590069EE8F /* OCRTool.app */,
+				4B518C6E21869E590069EE8F /* OCRToolTests.xctest */,
+				4B518C7921869E590069EE8F /* OCRToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B518C5821869E590069EE8F /* OCRTool */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C8C21869EB70069EE8F /* Class */,
+				4B518C5921869E590069EE8F /* AppDelegate.h */,
+				4B518C5A21869E590069EE8F /* AppDelegate.m */,
+				4B518C6221869E590069EE8F /* Assets.xcassets */,
+				4B518C6421869E590069EE8F /* LaunchScreen.storyboard */,
+				4B518C6721869E590069EE8F /* Info.plist */,
+				4B518C6821869E590069EE8F /* main.m */,
+			);
+			path = OCRTool;
+			sourceTree = "<group>";
+		};
+		4B518C7121869E590069EE8F /* OCRToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C7221869E590069EE8F /* OCRToolTests.m */,
+				4B518C7421869E590069EE8F /* Info.plist */,
+			);
+			path = OCRToolTests;
+			sourceTree = "<group>";
+		};
+		4B518C7C21869E590069EE8F /* OCRToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C7D21869E590069EE8F /* OCRToolUITests.m */,
+				4B518C7F21869E590069EE8F /* Info.plist */,
+			);
+			path = OCRToolUITests;
+			sourceTree = "<group>";
+		};
+		4B518C8B21869EAF0069EE8F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD016321A2EDC400413B14 /* Result<识别结果> */,
+				4B518C912186B9E60069EE8F /* Main */,
+				4B518C8D21869EC30069EE8F /* Home<主页面> */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		4B518C8C21869EB70069EE8F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D4221AC2B1A008C9DEF /* Custom */,
+				4B7A567321913E8C00035EF2 /* Utils */,
+				4B518C8B21869EAF0069EE8F /* General */,
+				4B518CB52186D2CB0069EE8F /* Expand */,
+				4B518CA92186C6AC0069EE8F /* Resource */,
+				4B518CB62186D2F10069EE8F /* Vendors */,
+				4B518CBF2186F6050069EE8F /* Category */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		4B518C8D21869EC30069EE8F /* Home<主页面> */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A567A2191563F00035EF2 /* Models */,
+				4B518CAB2186C85E0069EE8F /* Views */,
+				4B518C972186BC880069EE8F /* ViewModels */,
+				4B518C962186BC7C0069EE8F /* Controllers */,
+			);
+			path = "Home<主页面>";
+			sourceTree = "<group>";
+		};
+		4B518C912186B9E60069EE8F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A567E2191565600035EF2 /* Models */,
+				4B518CAC2186C8700069EE8F /* Views */,
+				4B518C982186BC9D0069EE8F /* ViewModels */,
+				4B518C922186B9F10069EE8F /* Controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4B518C922186B9F10069EE8F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D3821AC2A6F008C9DEF /* SJWebViewController.h */,
+				4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */,
+				4B518C932186BA040069EE8F /* SJViewController.h */,
+				4B518C942186BA040069EE8F /* SJViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B518C962186BC7C0069EE8F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C8E21869EDA0069EE8F /* OTHomeController.h */,
+				4B518C8F21869EDA0069EE8F /* OTHomeController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B518C972186BC880069EE8F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C9C2186BCC40069EE8F /* OTHomeViewModel.h */,
+				4B7A567821914D2F00035EF2 /* OTHomeViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4B518C982186BC9D0069EE8F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C992186BCAF0069EE8F /* SJViewModel.h */,
+				4B518C9A2186BCAF0069EE8F /* SJViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4B518CA92186C6AC0069EE8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4B518CAA2186C6C10069EE8F /* OCRTool.pch */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4B518CAB2186C85E0069EE8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B1BCE1C219DB18100FC0DA8 /* OTHomeView.h */,
+				4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */,
+				4B518CB22186C8BD0069EE8F /* OTHomeCollectionCell.h */,
+				4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B518CAC2186C8700069EE8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B518CAD2186C8840069EE8F /* SJCollectionViewCell.h */,
+				4B518CAE2186C8840069EE8F /* SJCollectionViewCell.m */,
+				4B518CAF2186C8840069EE8F /* SJCollectionViewCell.xib */,
+				4B91316F2186FC4200580F95 /* SJCollectionReusableView.h */,
+				4B9131702186FC4200580F95 /* SJCollectionReusableView.m */,
+				4B9131712186FC4200580F95 /* SJCollectionReusableView.xib */,
+				4B91317F2187092600580F95 /* SJTableViewCell.h */,
+				4B9131802187092600580F95 /* SJTableViewCell.m */,
+				4B9131812187092600580F95 /* SJTableViewCell.xib */,
+				4B1BCE1F219DB19400FC0DA8 /* SJView.h */,
+				4B1BCE20219DB19400FC0DA8 /* SJView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B518CB52186D2CB0069EE8F /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		4B518CB62186D2F10069EE8F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD016C21A2F3AB00413B14 /* ZZJBlockBarButtonItem */,
+				4B7A56652191389600035EF2 /* BDAipOCR */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		4B518CBF2186F6050069EE8F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */,
+				4B518CC02186F6120069EE8F /* UIColor */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		4B518CC02186F6120069EE8F /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				4B518CBA2186F5E30069EE8F /* UIColor+Expanded.h */,
+				4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */,
+				4B518CBC2186F5E30069EE8F /* UIColor+HSV.h */,
+				4B518CB92186F5E30069EE8F /* UIColor+HSV.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		4B7A56652191389600035EF2 /* BDAipOCR */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A5666219138B700035EF2 /* AipBase.framework */,
+				4B7A5667219138B700035EF2 /* AipOcrSdk.framework */,
+				4B7A5668219138B700035EF2 /* IdcardQuality.framework */,
+			);
+			path = BDAipOCR;
+			sourceTree = "<group>";
+		};
+		4B7A567321913E8C00035EF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */,
+				4B7A567421913E9600035EF2 /* SJColorUtil */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4B7A567421913E9600035EF2 /* SJColorUtil */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A567521913EA800035EF2 /* SJColorUtil.h */,
+				4B7A567621913EA800035EF2 /* SJColorUtil.m */,
+			);
+			path = SJColorUtil;
+			sourceTree = "<group>";
+		};
+		4B7A567A2191563F00035EF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A567B2191565200035EF2 /* OTHomeMenuModel.h */,
+				4B7A567C2191565200035EF2 /* OTHomeMenuModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B7A567E2191565600035EF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A56802191566C00035EF2 /* SJModel.h */,
+				4B7A56812191566C00035EF2 /* SJModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BBD016321A2EDC400413B14 /* Result<识别结果> */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD016621A2EE0E00413B14 /* Views */,
+				4BBD016521A2EE0600413B14 /* Models */,
+				4BBD016421A2EDFF00413B14 /* Controllers */,
+			);
+			path = "Result<识别结果>";
+			sourceTree = "<group>";
+		};
+		4BBD016421A2EDFF00413B14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD016721A2EE2200413B14 /* OTResultController.h */,
+				4BBD016821A2EE2200413B14 /* OTResultController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4BBD016521A2EE0600413B14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BBD016621A2EE0E00413B14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B454D3C21AC2B10008C9DEF /* SJShareAlertCell.h */,
+				4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */,
+				4B454D3F21AC2B10008C9DEF /* SJShareAlertView.h */,
+				4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */,
+				4B454D5F21AC4240008C9DEF /* SJInputToolBar.h */,
+				4B454D6021AC4240008C9DEF /* SJInputToolBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BBD016C21A2F3AB00413B14 /* ZZJBlockBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				4BBD016D21A2F3BC00413B14 /* ZZJBlockBarButtonItem.h */,
+				4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */,
+			);
+			name = ZZJBlockBarButtonItem;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		98402D447F550961F5EDC70F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */,
+				FEEA27254038C8A3B39015D4 /* Pods-OCRTool.release.xcconfig */,
+				58BE2E1321AF301CC364AF4D /* Pods-OCRToolTests.debug.xcconfig */,
+				2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */,
+				434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */,
+				B1AECDD46D8B41958276286E /* Pods-OCRToolUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF5EB1F3D7D9D539283B1B92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */,
+				96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */,
+				8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B518C5521869E590069EE8F /* OCRTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B518C8221869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRTool" */;
+			buildPhases = (
+				28BB56CA68C115B9E48C04EC /* [CP] Check Pods Manifest.lock */,
+				4B518C5221869E590069EE8F /* Sources */,
+				4B518C5321869E590069EE8F /* Frameworks */,
+				4B518C5421869E590069EE8F /* Resources */,
+				406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */,
+				5219B52109878C9CCFE3078D /* [CP] Copy Pods Resources */,
+				4B7A567221913A3700035EF2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCRTool;
+			productName = OCRTool;
+			productReference = 4B518C5621869E590069EE8F /* OCRTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B518C6D21869E590069EE8F /* OCRToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B518C8521869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRToolTests" */;
+			buildPhases = (
+				9BE885ED91323D436AF302D3 /* [CP] Check Pods Manifest.lock */,
+				4B518C6A21869E590069EE8F /* Sources */,
+				4B518C6B21869E590069EE8F /* Frameworks */,
+				4B518C6C21869E590069EE8F /* Resources */,
+				D6FF073469F586EABF08CD46 /* [CP] Embed Pods Frameworks */,
+				F25F617BD3786E974AFD454C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B518C7021869E590069EE8F /* PBXTargetDependency */,
+			);
+			name = OCRToolTests;
+			productName = OCRToolTests;
+			productReference = 4B518C6E21869E590069EE8F /* OCRToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B518C7821869E590069EE8F /* OCRToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B518C8821869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRToolUITests" */;
+			buildPhases = (
+				DDCECA29BB229B02FAD53FE4 /* [CP] Check Pods Manifest.lock */,
+				4B518C7521869E590069EE8F /* Sources */,
+				4B518C7621869E590069EE8F /* Frameworks */,
+				4B518C7721869E590069EE8F /* Resources */,
+				8DDB980D9FD5F6ADD5774009 /* [CP] Embed Pods Frameworks */,
+				46C6A321286B02ADC8C63AB0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B518C7B21869E590069EE8F /* PBXTargetDependency */,
+			);
+			name = OCRToolUITests;
+			productName = OCRToolUITests;
+			productReference = 4B518C7921869E590069EE8F /* OCRToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B518C4E21869E590069EE8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OT;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Jaesun;
+				TargetAttributes = {
+					4B518C5521869E590069EE8F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4B518C6D21869E590069EE8F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B518C5521869E590069EE8F;
+					};
+					4B518C7821869E590069EE8F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B518C5521869E590069EE8F;
+					};
+				};
+			};
+			buildConfigurationList = 4B518C5121869E590069EE8F /* Build configuration list for PBXProject "OCRTool" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B518C4D21869E590069EE8F;
+			productRefGroup = 4B518C5721869E590069EE8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B518C5521869E590069EE8F /* OCRTool */,
+				4B518C6D21869E590069EE8F /* OCRToolTests */,
+				4B518C7821869E590069EE8F /* OCRToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B518C5421869E590069EE8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
+				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
+				4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */,
+				4B518C6321869E590069EE8F /* Assets.xcassets in Resources */,
+				4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C6C21869E590069EE8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C7721869E590069EE8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28BB56CA68C115B9E48C04EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCRTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FFDropDownMenu/FFDropDownMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFDropDownMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46C6A321286B02ADC8C63AB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5219B52109878C9CCFE3078D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DDB980D9FD5F6ADD5774009 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BE885ED91323D436AF302D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCRToolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FF073469F586EABF08CD46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDCECA29BB229B02FAD53FE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCRToolUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F25F617BD3786E974AFD454C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B518C5221869E590069EE8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9131822187092600580F95 /* SJTableViewCell.m in Sources */,
+				4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */,
+				4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */,
+				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
+				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
+				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
+				4BBD016F21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m in Sources */,
+				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
+				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
+				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
+				4B7A56822191566C00035EF2 /* SJModel.m in Sources */,
+				4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */,
+				4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */,
+				4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */,
+				4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */,
+				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,
+				4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */,
+				4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */,
+				4B518C952186BA040069EE8F /* SJViewController.m in Sources */,
+				4B518C6921869E590069EE8F /* main.m in Sources */,
+				4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */,
+				4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */,
+				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
+				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
+				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
+				4B454D6121AC4240008C9DEF /* SJInputToolBar.m in Sources */,
+				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C6A21869E590069EE8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B518C7321869E590069EE8F /* OCRToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B518C7521869E590069EE8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B518C7E21869E590069EE8F /* OCRToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B518C7021869E590069EE8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B518C5521869E590069EE8F /* OCRTool */;
+			targetProxy = 4B518C6F21869E590069EE8F /* PBXContainerItemProxy */;
+		};
+		4B518C7B21869E590069EE8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B518C5521869E590069EE8F /* OCRTool */;
+			targetProxy = 4B518C7A21869E590069EE8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B518C6421869E590069EE8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B518C6521869E590069EE8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B518C8021869E590069EE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B518C8121869E590069EE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B518C8321869E590069EE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3528Q8DDD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCRTool/Class/Vendors/BDAipOCR",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
+				INFOPLIST_FILE = OCRTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B518C8421869E590069EE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEEA27254038C8A3B39015D4 /* Pods-OCRTool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3528Q8DDD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCRTool/Class/Vendors/BDAipOCR",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
+				INFOPLIST_FILE = OCRTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B518C8621869E590069EE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BE2E1321AF301CC364AF4D /* Pods-OCRToolTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OCRToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = S.J.OCRToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCRTool.app/OCRTool";
+			};
+			name = Debug;
+		};
+		4B518C8721869E590069EE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OCRToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = S.J.OCRToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCRTool.app/OCRTool";
+			};
+			name = Release;
+		};
+		4B518C8921869E590069EE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OCRToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = S.J.OCRToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OCRTool;
+			};
+			name = Debug;
+		};
+		4B518C8A21869E590069EE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AECDD46D8B41958276286E /* Pods-OCRToolUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OCRToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = S.J.OCRToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OCRTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B518C5121869E590069EE8F /* Build configuration list for PBXProject "OCRTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B518C8021869E590069EE8F /* Debug */,
+				4B518C8121869E590069EE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B518C8221869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B518C8321869E590069EE8F /* Debug */,
+				4B518C8421869E590069EE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B518C8521869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B518C8621869E590069EE8F /* Debug */,
+				4B518C8721869E590069EE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B518C8821869E590069EE8F /* Build configuration list for PBXNativeTarget "OCRToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B518C8921869E590069EE8F /* Debug */,
+				4B518C8A21869E590069EE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B518C4E21869E590069EE8F /* Project object */;
+}

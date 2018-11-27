@@ -198,6 +198,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04F1720621ACE215005140C7 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				4B518C5921869E590069EE8F /* AppDelegate.h */,
+				4B518C5A21869E590069EE8F /* AppDelegate.m */,
+				4B518C6221869E590069EE8F /* Assets.xcassets */,
+				4B518C6421869E590069EE8F /* LaunchScreen.storyboard */,
+				4B518C6721869E590069EE8F /* Info.plist */,
+				4B518C6821869E590069EE8F /* main.m */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
 		4B454D4221AC2B1A008C9DEF /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +222,6 @@
 		4B454D4321AC2B23008C9DEF /* SJCustomAlert */ = {
 			isa = PBXGroup;
 			children = (
-				4B454D4B21AC2B80008C9DEF /* Views */,
 				4B454D4421AC2B38008C9DEF /* Controllers */,
 			);
 			path = SJCustomAlert;
@@ -224,13 +236,6 @@
 				4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		4B454D4B21AC2B80008C9DEF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */ = {
@@ -277,13 +282,8 @@
 		4B518C5821869E590069EE8F /* OCRTool */ = {
 			isa = PBXGroup;
 			children = (
+				04F1720621ACE215005140C7 /* APP */,
 				4B518C8C21869EB70069EE8F /* Class */,
-				4B518C5921869E590069EE8F /* AppDelegate.h */,
-				4B518C5A21869E590069EE8F /* AppDelegate.m */,
-				4B518C6221869E590069EE8F /* Assets.xcassets */,
-				4B518C6421869E590069EE8F /* LaunchScreen.storyboard */,
-				4B518C6721869E590069EE8F /* Info.plist */,
-				4B518C6821869E590069EE8F /* main.m */,
 			);
 			path = OCRTool;
 			sourceTree = "<group>";
@@ -613,8 +613,6 @@
 				4B518C6A21869E590069EE8F /* Sources */,
 				4B518C6B21869E590069EE8F /* Frameworks */,
 				4B518C6C21869E590069EE8F /* Resources */,
-				D6FF073469F586EABF08CD46 /* [CP] Embed Pods Frameworks */,
-				F25F617BD3786E974AFD454C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,8 +632,6 @@
 				4B518C7521869E590069EE8F /* Sources */,
 				4B518C7621869E590069EE8F /* Frameworks */,
 				4B518C7721869E590069EE8F /* Resources */,
-				8DDB980D9FD5F6ADD5774009 /* [CP] Embed Pods Frameworks */,
-				46C6A321286B02ADC8C63AB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -767,21 +763,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		46C6A321286B02ADC8C63AB0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5219B52109878C9CCFE3078D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,26 +774,11 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DDB980D9FD5F6ADD5774009 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BE885ED91323D436AF302D3 /* [CP] Check Pods Manifest.lock */ = {
@@ -833,21 +799,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6FF073469F586EABF08CD46 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DDCECA29BB229B02FAD53FE4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -864,21 +815,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F25F617BD3786E974AFD454C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1078,7 +1014,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
-				INFOPLIST_FILE = OCRTool/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1099,7 +1035,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
-				INFOPLIST_FILE = OCRTool/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";

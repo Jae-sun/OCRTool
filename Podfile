@@ -8,7 +8,6 @@ target 'OCRTool' do
   # Pods for OCRTool
   pod 'ReactiveCocoa', '~> 7.0'
   pod 'Masonry'
-  pod 'FFDropDownMenu'
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
   # 集成微信(精简版0.2M)

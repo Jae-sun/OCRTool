@@ -6,7 +6,8 @@ target 'OCRTool' do
   use_frameworks!
 
   # Pods for OCRTool
-  pod 'ReactiveCocoa', '~> 7.0'
+  # pod 'ReactiveCocoa', '~> 7.0'
+  
   pod 'Masonry'
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'

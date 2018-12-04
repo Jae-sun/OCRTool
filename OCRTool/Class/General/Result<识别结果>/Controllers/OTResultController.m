@@ -49,25 +49,34 @@
 
 - (void)configDatas {
     NSMutableString *message = [NSMutableString string];
-    if([self.reslut isKindOfClass:[NSDictionary class]]){
-        [self.reslut enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
-                [message appendFormat:@"%@: %@\n", key, obj[@"words"]];
-            }
-            else {
-                [message appendFormat:@"%@: %@\n", key, obj];
-            }
-        }];
-    }
-    else if([self.reslut isKindOfClass:[NSArray class]]){
-        for(NSDictionary *obj in self.reslut){
-            if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
-                [message appendFormat:@"%@\n", obj[@"words"]];
-            }
-            else {
-                [message appendFormat:@"%@\n", obj];
+    
+    if(self.result[@"words_result"]) {
+        if([self.result[@"words_result"] isKindOfClass:[NSDictionary class]]){
+            [self.result[@"words_result"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
+                    [message appendFormat:@"%@: %@\n", key, obj[@"words"]];
+                }
+                else {
+                    [message appendFormat:@"%@: %@\n", key, obj];
+                }
+            }];
+        }
+        else if([self.result[@"words_result"] isKindOfClass:[NSArray class]]){
+            for(NSDictionary *obj in self.result[@"words_result"]){
+                if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
+                    [message appendFormat:@"%@\n", obj[@"words"]];
+                }else{
+                    [message appendFormat:@"%@\n", obj];
+                }
+                
             }
         }
+    }
+    else {
+        NSDictionary *resultDic = self.result[@"result"];
+        [message appendFormat:@"银行卡号：%@\n",resultDic[@"bank_card_number"]];
+        [message appendFormat:@"银行名称：%@\n",resultDic[@"bank_name"]];
+        [message appendFormat:@"失效日期：%@\n",resultDic[@"valid_date"]];
     }
     self.textView.text = message;
 }

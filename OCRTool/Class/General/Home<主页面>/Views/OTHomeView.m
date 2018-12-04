@@ -15,6 +15,9 @@
 @property (nonatomic, strong) UIImageView *backImageView;
 /** collection */
 @property (nonatomic, strong) UICollectionView *collectonView;
+/** 历史记录按钮 **/
+@property (nonatomic, strong) UIButton *historyButton;
+
 
 @end
 
@@ -55,6 +58,8 @@
     [self.collectonView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self).insets(UIEdgeInsetsMake(top, left, top, left));
     }];
+    
+    
 }
 
 - (void)setDataSource:(id<UICollectionViewDataSource>)dataSource {

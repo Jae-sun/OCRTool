@@ -18,7 +18,6 @@
 		4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */; };
 		4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */; };
 		4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */; };
-		4B454D6121AC4240008C9DEF /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D6021AC4240008C9DEF /* SJInputToolBar.m */; };
 		4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C5A21869E590069EE8F /* AppDelegate.m */; };
 		4B518C6321869E590069EE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B518C6221869E590069EE8F /* Assets.xcassets */; };
 		4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B518C6421869E590069EE8F /* LaunchScreen.storyboard */; };
@@ -47,8 +46,20 @@
 		4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9131712186FC4200580F95 /* SJCollectionReusableView.xib */; };
 		4B9131822187092600580F95 /* SJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9131802187092600580F95 /* SJTableViewCell.m */; };
 		4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9131812187092600580F95 /* SJTableViewCell.xib */; };
+		4BB782B721AD74A600F918F4 /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB782B521AD74A600F918F4 /* ZZJBlockBarButtonItem.m */; };
+		4BB782C521AD751D00F918F4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782C421AD751D00F918F4 /* AdSupport.framework */; };
+		4BB782C721AD752600F918F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782C621AD752600F918F4 /* CoreLocation.framework */; };
+		4BB782C921AD753100F918F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782C821AD753100F918F4 /* QuartzCore.framework */; };
+		4BB782CB21AD753900F918F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782CA21AD753900F918F4 /* SystemConfiguration.framework */; };
+		4BB782CD21AD754200F918F4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782CC21AD754100F918F4 /* CoreTelephony.framework */; };
+		4BB782CF21AD754900F918F4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782CE21AD754800F918F4 /* libz.tbd */; };
+		4BB782D121AD755000F918F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D021AD755000F918F4 /* Security.framework */; };
+		4BB782D321AD755700F918F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D221AD755700F918F4 /* StoreKit.framework */; };
+		4BB782D521AD755E00F918F4 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D421AD755E00F918F4 /* libxml2.tbd */; };
+		4BB782D721AD756600F918F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D621AD756600F918F4 /* AVFoundation.framework */; };
+		4BB782D921AD756D00F918F4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D821AD756D00F918F4 /* WebKit.framework */; };
+		4BB782DC21AD8B1500F918F4 /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */; };
 		4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD016821A2EE2200413B14 /* OTResultController.m */; };
-		4BBD016F21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */; };
 		738E6B4F30B9C05E1EA366F0 /* Pods_OCRToolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,8 +119,6 @@
 		4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SJCategory.m"; path = "OCRTool/Class/Category/UIImage+SJCategroy/UIImage+SJCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCoreDataUtil.m; sourceTree = "<group>"; };
 		4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCoreDataUtil.h; sourceTree = "<group>"; };
-		4B454D5F21AC4240008C9DEF /* SJInputToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
-		4B454D6021AC4240008C9DEF /* SJInputToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
 		4B518C5621869E590069EE8F /* OCRTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B518C5921869E590069EE8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B518C5A21869E590069EE8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -156,10 +165,23 @@
 		4B91317F2187092600580F95 /* SJTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJTableViewCell.h; sourceTree = "<group>"; };
 		4B9131802187092600580F95 /* SJTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJTableViewCell.m; sourceTree = "<group>"; };
 		4B9131812187092600580F95 /* SJTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJTableViewCell.xib; sourceTree = "<group>"; };
+		4BB782B521AD74A600F918F4 /* ZZJBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZJBlockBarButtonItem.m; sourceTree = "<group>"; };
+		4BB782B621AD74A600F918F4 /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
+		4BB782C421AD751D00F918F4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4BB782C621AD752600F918F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4BB782C821AD753100F918F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4BB782CA21AD753900F918F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4BB782CC21AD754100F918F4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4BB782CE21AD754800F918F4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4BB782D021AD755000F918F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4BB782D221AD755700F918F4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4BB782D421AD755E00F918F4 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		4BB782D621AD756600F918F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4BB782D821AD756D00F918F4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4BB782DA21AD8B1500F918F4 /* SJInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
+		4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
 		4BBD016721A2EE2200413B14 /* OTResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTResultController.h; sourceTree = "<group>"; };
 		4BBD016821A2EE2200413B14 /* OTResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTResultController.m; sourceTree = "<group>"; };
-		4BBD016D21A2F3BC00413B14 /* ZZJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJBlockBarButtonItem.h; sourceTree = "<group>"; };
-		4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZJBlockBarButtonItem.m; sourceTree = "<group>"; };
 		58BE2E1321AF301CC364AF4D /* Pods-OCRToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRToolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRToolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +194,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB782D921AD756D00F918F4 /* WebKit.framework in Frameworks */,
+				4BB782D721AD756600F918F4 /* AVFoundation.framework in Frameworks */,
+				4BB782D521AD755E00F918F4 /* libxml2.tbd in Frameworks */,
+				4BB782D321AD755700F918F4 /* StoreKit.framework in Frameworks */,
+				4BB782D121AD755000F918F4 /* Security.framework in Frameworks */,
+				4BB782CF21AD754900F918F4 /* libz.tbd in Frameworks */,
+				4BB782CD21AD754200F918F4 /* CoreTelephony.framework in Frameworks */,
+				4BB782CB21AD753900F918F4 /* SystemConfiguration.framework in Frameworks */,
+				4BB782C921AD753100F918F4 /* QuartzCore.framework in Frameworks */,
+				4BB782C721AD752600F918F4 /* CoreLocation.framework in Frameworks */,
+				4BB782C521AD751D00F918F4 /* AdSupport.framework in Frameworks */,
 				4B7A566C21913A3700035EF2 /* AipBase.framework in Frameworks */,
 				26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */,
 				4B7A567021913A3700035EF2 /* IdcardQuality.framework in Frameworks */,
@@ -437,7 +470,7 @@
 		4B518CB62186D2F10069EE8F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				4BBD016C21A2F3AB00413B14 /* ZZJBlockBarButtonItem */,
+				4BB782B421AD749A00F918F4 /* ZZJBlockBarButtonItem */,
 				4B7A56652191389600035EF2 /* BDAipOCR */,
 			);
 			path = Vendors;
@@ -509,6 +542,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4BB782B421AD749A00F918F4 /* ZZJBlockBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				4BB782B621AD74A600F918F4 /* ZZJBlockBarButtonItem.h */,
+				4BB782B521AD74A600F918F4 /* ZZJBlockBarButtonItem.m */,
+			);
+			path = ZZJBlockBarButtonItem;
+			sourceTree = "<group>";
+		};
 		4BBD016321A2EDC400413B14 /* Result<识别结果> */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,24 +580,14 @@
 		4BBD016621A2EE0E00413B14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4BB782DA21AD8B1500F918F4 /* SJInputToolBar.h */,
+				4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */,
 				4B454D3C21AC2B10008C9DEF /* SJShareAlertCell.h */,
 				4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */,
 				4B454D3F21AC2B10008C9DEF /* SJShareAlertView.h */,
 				4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */,
-				4B454D5F21AC4240008C9DEF /* SJInputToolBar.h */,
-				4B454D6021AC4240008C9DEF /* SJInputToolBar.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		4BBD016C21A2F3AB00413B14 /* ZZJBlockBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				4BBD016D21A2F3BC00413B14 /* ZZJBlockBarButtonItem.h */,
-				4BBD016E21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m */,
-			);
-			name = ZZJBlockBarButtonItem;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		98402D447F550961F5EDC70F /* Pods */ = {
@@ -574,6 +606,17 @@
 		BF5EB1F3D7D9D539283B1B92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BB782D821AD756D00F918F4 /* WebKit.framework */,
+				4BB782D621AD756600F918F4 /* AVFoundation.framework */,
+				4BB782D421AD755E00F918F4 /* libxml2.tbd */,
+				4BB782D221AD755700F918F4 /* StoreKit.framework */,
+				4BB782D021AD755000F918F4 /* Security.framework */,
+				4BB782CE21AD754800F918F4 /* libz.tbd */,
+				4BB782CC21AD754100F918F4 /* CoreTelephony.framework */,
+				4BB782CA21AD753900F918F4 /* SystemConfiguration.framework */,
+				4BB782C821AD753100F918F4 /* QuartzCore.framework */,
+				4BB782C621AD752600F918F4 /* CoreLocation.framework */,
+				4BB782C421AD751D00F918F4 /* AdSupport.framework */,
 				46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */,
 				96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */,
 				8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */,
@@ -613,6 +656,8 @@
 				4B518C6A21869E590069EE8F /* Sources */,
 				4B518C6B21869E590069EE8F /* Frameworks */,
 				4B518C6C21869E590069EE8F /* Resources */,
+				B1719CF186A5CFFB89F456DD /* [CP] Embed Pods Frameworks */,
+				39D3E8B9E2BBC2582357C9D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -632,6 +677,8 @@
 				4B518C7521869E590069EE8F /* Sources */,
 				4B518C7621869E590069EE8F /* Frameworks */,
 				4B518C7721869E590069EE8F /* Resources */,
+				C3E65D664C10BA0B60E54851 /* [CP] Embed Pods Frameworks */,
+				5C87083D448BA9771005335D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -737,6 +784,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		39D3E8B9E2BBC2582357C9D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,11 +828,26 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C87083D448BA9771005335D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BE885ED91323D436AF302D3 /* [CP] Check Pods Manifest.lock */ = {
@@ -789,6 +866,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1719CF186A5CFFB89F456DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3E65D664C10BA0B60E54851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDCECA29BB229B02FAD53FE4 /* [CP] Check Pods Manifest.lock */ = {
@@ -822,7 +929,6 @@
 				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
-				4BBD016F21A2F3BC00413B14 /* ZZJBlockBarButtonItem.m in Sources */,
 				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
 				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
 				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
@@ -834,6 +940,7 @@
 				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,
 				4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */,
 				4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */,
+				4BB782B721AD74A600F918F4 /* ZZJBlockBarButtonItem.m in Sources */,
 				4B518C952186BA040069EE8F /* SJViewController.m in Sources */,
 				4B518C6921869E590069EE8F /* main.m in Sources */,
 				4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */,
@@ -841,7 +948,7 @@
 				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
-				4B454D6121AC4240008C9DEF /* SJInputToolBar.m in Sources */,
+				4BB782DC21AD8B1500F918F4 /* SJInputToolBar.m in Sources */,
 				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1009,6 +1116,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCRTool/Class/Vendors/GDT_SDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1032,6 +1143,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCRTool/Class/Vendors/GDT_SDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaesun.OCRTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

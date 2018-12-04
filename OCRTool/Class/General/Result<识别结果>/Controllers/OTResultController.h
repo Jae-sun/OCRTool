@@ -11,6 +11,6 @@
 @interface OTResultController : UIViewController
 
 /** 扫描结果 **/
-@property (nonatomic, copy) id reslut;
+@property (nonatomic, copy) id result;
 
 @end

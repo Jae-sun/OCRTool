@@ -27,7 +27,6 @@
     [[UMSocialManager defaultManager] setUmSocialAppkey:@"5bfbfc6ff1f55629480003bc"];
     
     [[AipOcrService shardService] authWithAK:@"oehGlhGqfVbccSPhh5i4UpCk" andSK:@"yhQTeknEMRaet9yzXr8RBUbvAoK3HfTn"];
-
     return YES;
 }
 

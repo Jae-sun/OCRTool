@@ -24,9 +24,8 @@
 
 @property (nonatomic, strong) OTHomeViewModel *viewModel;
 
-/** <#注释#> **/
+/**  **/
 @property (nonatomic, strong) UIViewController *presentedController;
-
 
 @end
 
@@ -39,21 +38,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"欢迎使用OCR";
+    self.title = @"欢迎使用智能文字识别";
     [self.viewModel configDatas];
     [self configSubviews];
     [self configCallback];
 }
 
 - (void)configSubviews {
-   
     self.homeView = [[OTHomeView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.homeView];
     self.homeView.delegate = self;
     self.homeView.dataSource = self;
     [self.homeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
-    }]; 
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,12 +76,30 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self generalOCR];
+    OTHomeMenuModel *model = [self.viewModel modelOfItemWithIndexPath:indexPath];
+    if ([model.title isEqualToString:@"文字识别"]) {
+        [self generalOCR];
+    }
+    else if ([model.title isEqualToString:@"高精度识别"]) {
+        [self generalAccurateOCR];
+    }
+    else if ([model.title isEqualToString:@"身份证（前）"]) {
+        [self idcardOCROnlineFront];
+    }
+    else if ([model.title isEqualToString:@"身份证（后）"]) {
+        [self idcardOCROnlineBack];
+    }
+    else if ([model.title isEqualToString:@"银行卡"]) {
+        [self bankCardOCROnline];
+    }
+    else if ([model.title isEqualToString:@"驾驶证"]) {
+        [self drivingLicenseOCR];
+    }
 }
 
 #pragma mark - Action
-- (void)generalOCR{
-    
+// 普通文字识别
+- (void)generalOCR {
     UIViewController *vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         // 在这个block里，image即为切好的图片，可自行选择如何处理
         NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
@@ -96,7 +112,22 @@
     [self presentViewController:vc animated:YES completion:nil];
     self.presentedController = vc;
 }
+// 精确识别文字
+- (void)generalAccurateOCR{
+    
+    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+        NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+        [[AipOcrService shardService] detectTextAccurateFromImage:image
+                                                      withOptions:options
+                                                   successHandler:_successHandler
+                                                      failHandler:_failHandler];
+        
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
+     self.presentedController = vc;
+}
 
+// 身份证（前）
 - (void)idcardOCROnlineFront {
     UIViewController * vc =
     [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont
@@ -109,8 +140,52 @@
                                  }];
     
     [self presentViewController:vc animated:YES completion:nil];
+     self.presentedController = vc;
     
 }
+// 身份证（后）
+- (void)idcardOCROnlineBack {
+    UIViewController * vc =
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardBack
+                                 andImageHandler:^(UIImage *image) {
+                                     [[AipOcrService shardService] detectIdCardBackFromImage:image
+                                                                                 withOptions:nil
+                                                                              successHandler:_successHandler
+                                                                                 failHandler:_failHandler];
+                                 }];
+    [self presentViewController:vc animated:YES completion:nil];
+     self.presentedController = vc;
+}
+
+// 银行卡
+- (void)bankCardOCROnline {
+    UIViewController * vc =
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard
+                                 andImageHandler:^(UIImage *image) {
+                                     [[AipOcrService shardService] detectBankCardFromImage:image
+                                                                            successHandler:_successHandler
+                                                                               failHandler:_failHandler];
+                                 }];
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+    
+}
+
+// 驾驶证
+- (void)drivingLicenseOCR {
+    
+    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+        
+        [[AipOcrService shardService] detectDrivingLicenseFromImage:image
+                                                        withOptions:nil
+                                                     successHandler:_successHandler
+                                                        failHandler:_failHandler];
+        
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+}
+
 
 #pragma mark- other
 - (void)configCallback {
@@ -118,22 +193,16 @@
     // 这是默认的识别成功的回调
     _successHandler = ^(id result){
         NSLog(@"%@", result);
-        if(result[@"words_result"]){
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                [weakSelf.presentedController dismissViewControllerAnimated:NO completion:^{
-                    OTResultController *VC = [[OTResultController alloc] init];
-                    VC.reslut = result[@"words_result"];
-                    [weakSelf.navigationController pushViewController:VC animated:YES];
-                }];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [weakSelf.presentedController dismissViewControllerAnimated:NO completion:^{
+                OTResultController *VC = [[OTResultController alloc] init];
+                VC.result = result;
+                [weakSelf.navigationController pushViewController:VC animated:YES];
             }];
-        }
+        }];
     };
     _failHandler = ^(NSError *error){
-        NSLog(@"%@", error);
-        NSString *msg = [NSString stringWithFormat:@"%li:%@", (long)[error code], [error localizedDescription]];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[[UIAlertView alloc] initWithTitle:@"识别失败" message:msg delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-        }];
+        NSLog(@"识别失败");
     };
 }
 

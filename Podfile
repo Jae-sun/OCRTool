@@ -19,7 +19,6 @@ target 'OCRTool' do
   pod 'UMCShare/Social/DingDing'
   # 集成短信
   pod 'UMCShare/Social/SMS'
-  
   target 'OCRToolTests' do
     inherit! :search_paths
     # Pods for testing

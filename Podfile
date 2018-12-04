@@ -9,16 +9,17 @@ target 'OCRTool' do
   # pod 'ReactiveCocoa', '~> 7.0'
   
   pod 'Masonry'
+  # 友盟
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
-  # 集成微信(精简版0.2M)
-  pod 'UMCShare/Social/ReducedWeChat'
-  # 集成QQ/QZone/TIM(精简版0.5M)
-  pod 'UMCShare/Social/ReducedQQ'
-  # 集成钉钉
-  pod 'UMCShare/Social/DingDing'
-  # 集成短信
-  pod 'UMCShare/Social/SMS'
+  pod 'UMCShare/Social/WeChat' # 集成微信(完整版14.4M)
+  pod 'UMCShare/Social/QQ'    # 集成QQ/QZone/TIM(精简版0.5M)
+  pod 'UMCShare/Social/DingDing'     # 集成钉钉
+  pod 'UMCShare/Social/SMS'          # 集成短信
+  # 集成谷歌广告AdMob
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'YYKit'
+  pod 'MBProgressHUD', '~> 1.1.0'
   
   target 'OCRToolTests' do
     inherit! :search_paths

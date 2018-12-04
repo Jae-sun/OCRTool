@@ -8,9 +8,15 @@
 
 #import "SJView.h"
 
+@protocol OTHomeViewDelegate <UICollectionViewDelegate>
+
+- (void)homeView:(UIView *)view clickedButton:(UIButton *)button;
+
+@end
+
 @interface OTHomeView : SJView
 
-@property (nonatomic, weak) id<UICollectionViewDelegate> delegate;
+@property (nonatomic, weak) id<OTHomeViewDelegate> delegate;
 @property (nonatomic, weak) id<UICollectionViewDataSource> dataSource;
 
 @end

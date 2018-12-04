@@ -66,4 +66,8 @@
     self.presentationController.backgroundDismissEnable = self.backgroundDismissEnable;
 }
 
+- (void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

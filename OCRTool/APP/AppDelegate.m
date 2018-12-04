@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OTHomeController.h"
+#import "SJLaunchADController.h"
 
 @interface AppDelegate ()
 
@@ -15,30 +16,20 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    OTHomeController *homeVC = [[OTHomeController alloc] init];
-    UINavigationController *rootNavC = [[UINavigationController alloc] initWithRootViewController:homeVC];
-    self.window.rootViewController = rootNavC;
-    [self.window makeKeyAndVisible];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
     
-    [[UMSocialManager defaultManager] setUmSocialAppkey:@"5bfbfc6ff1f55629480003bc"];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self updateRootController:NO];
+    
+    [UMConfigure setLogEnabled:YES];//设置打开日志
+    [UMConfigure initWithAppkey:@"5bfbfc6ff1f55629480003bc" channel:@"App Store"];
+    [self configUSharePlatforms];
     
     [[AipOcrService shardService] authWithAK:@"oehGlhGqfVbccSPhh5i4UpCk" andSK:@"yhQTeknEMRaet9yzXr8RBUbvAoK3HfTn"];
-
+   
     return YES;
-}
-
-- (void)configUSharePlatforms
-{
-    /* 设置微信的appKey和appSecret */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxdc1e388c3822c80b" appSecret:@"3baf1193c85774b3fd9d18447d76cab0" redirectURL:@"http://mobile.umeng.com/social"];
-    /* 设置分享到QQ互联的appID
-     * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
-     */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101523189"/*设置QQ平台的appID*/  appSecret:nil redirectURL:@"https://jaesun.oschina.io/"];
 }
 
 // 支持所有iOS系统
@@ -70,4 +61,32 @@
     return result;
 }
 
+#pragma mark- Public
+/**
+ 更新根控制器
+ */
+- (void)updateRootController:(BOOL)showed {
+    if (showed) {
+        OTHomeController *homeVC = [[OTHomeController alloc] init];
+        UINavigationController *rootNavC = [[UINavigationController alloc] initWithRootViewController:homeVC];
+        self.window.rootViewController = rootNavC;
+        [self.window makeKeyAndVisible];
+    }
+    else {
+        SJLaunchADController *adVC = [[SJLaunchADController alloc] init];
+        self.window.rootViewController = adVC;
+        [self.window makeKeyAndVisible];
+    }
+}
+
+#pragma mark- Private
+- (void)configUSharePlatforms
+{
+    /* 设置微信的appKey和appSecret */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx995b53fcb58cbb7c" appSecret:@"86529793b01c1078756d870008e807f6" redirectURL:@"https://jaesun.oschina.io/"];
+    /* 设置分享到QQ互联的appID
+     * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
+     */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101523189"/*设置QQ平台的appID*/  appSecret:nil redirectURL:@"https://jaesun.oschina.io/"];
+}
 @end

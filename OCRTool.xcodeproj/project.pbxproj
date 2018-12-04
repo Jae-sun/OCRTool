@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400DA7621B6675F00EF56EB /* 识别失败.png in Resources */ = {isa = PBXBuildFile; fileRef = 0400DA7521B6675F00EF56EB /* 识别失败.png */; };
+		044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044B667321B61A3D00D681BD /* bannerAdIds.plist */; };
+		044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667721B61A6500D681BD /* SJAdsUtil.m */; };
+		044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667C21B61A8300D681BD /* SJLaunchADController.m */; };
+		044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667F21B61A8300D681BD /* SJLanuchAdView.m */; };
+		044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B668521B61BDE00D681BD /* OTRecordAdModel.m */; };
+		044B669321B61BDE00D681BD /* OTRecordAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B668821B61BDE00D681BD /* OTRecordAdCell.m */; };
+		044B669721B61BDE00D681BD /* OTRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669121B61BDE00D681BD /* OTRecordController.m */; };
+		044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669D21B6269E00D681BD /* OTRecognitionController.m */; };
+		044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */; };
+		044B66A521B64A0700D681BD /* 识别中.gif in Resources */ = {isa = PBXBuildFile; fileRef = 044B66A421B64A0600D681BD /* 识别中.gif */; };
 		26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */; };
 		3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */; };
 		4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */; };
@@ -58,7 +69,6 @@
 		4BB782D521AD755E00F918F4 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D421AD755E00F918F4 /* libxml2.tbd */; };
 		4BB782D721AD756600F918F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D621AD756600F918F4 /* AVFoundation.framework */; };
 		4BB782D921AD756D00F918F4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB782D821AD756D00F918F4 /* WebKit.framework */; };
-		4BB782DC21AD8B1500F918F4 /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */; };
 		4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD016821A2EE2200413B14 /* OTResultController.m */; };
 		738E6B4F30B9C05E1EA366F0 /* Pods_OCRToolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFAF1BEF776E4652E370C65 /* Pods_OCRToolUITests.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +107,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0400DA7521B6675F00EF56EB /* 识别失败.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "识别失败.png"; sourceTree = "<group>"; };
+		044B667321B61A3D00D681BD /* bannerAdIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bannerAdIds.plist; sourceTree = "<group>"; };
+		044B667621B61A6500D681BD /* SJAdsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAdsUtil.h; sourceTree = "<group>"; };
+		044B667721B61A6500D681BD /* SJAdsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAdsUtil.m; sourceTree = "<group>"; };
+		044B667B21B61A8300D681BD /* SJLaunchADController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJLaunchADController.h; sourceTree = "<group>"; };
+		044B667C21B61A8300D681BD /* SJLaunchADController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJLaunchADController.m; sourceTree = "<group>"; };
+		044B667E21B61A8300D681BD /* SJLanuchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJLanuchAdView.h; sourceTree = "<group>"; };
+		044B667F21B61A8300D681BD /* SJLanuchAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJLanuchAdView.m; sourceTree = "<group>"; };
+		044B668421B61BDE00D681BD /* OTRecordAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRecordAdModel.h; sourceTree = "<group>"; };
+		044B668521B61BDE00D681BD /* OTRecordAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRecordAdModel.m; sourceTree = "<group>"; };
+		044B668721B61BDE00D681BD /* OTRecordAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRecordAdCell.h; sourceTree = "<group>"; };
+		044B668821B61BDE00D681BD /* OTRecordAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRecordAdCell.m; sourceTree = "<group>"; };
+		044B669021B61BDE00D681BD /* OTRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRecordController.h; sourceTree = "<group>"; };
+		044B669121B61BDE00D681BD /* OTRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRecordController.m; sourceTree = "<group>"; };
+		044B669C21B6269E00D681BD /* OTRecognitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionController.h; sourceTree = "<group>"; };
+		044B669D21B6269E00D681BD /* OTRecognitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionController.m; sourceTree = "<group>"; };
+		044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionAdLoadView.h; sourceTree = "<group>"; };
+		044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionAdLoadView.m; sourceTree = "<group>"; };
+		044B66A421B64A0600D681BD /* 识别中.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "识别中.gif"; sourceTree = "<group>"; };
 		2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool.debug.xcconfig"; sourceTree = "<group>"; };
 		434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,9 +260,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044B667521B61A6500D681BD /* SJAdsUtil */ = {
+			isa = PBXGroup;
+			children = (
+				044B667621B61A6500D681BD /* SJAdsUtil.h */,
+				044B667721B61A6500D681BD /* SJAdsUtil.m */,
+			);
+			path = SJAdsUtil;
+			sourceTree = "<group>";
+		};
+		044B667921B61A8300D681BD /* ADLaunch<启动广告> */ = {
+			isa = PBXGroup;
+			children = (
+				044B667A21B61A8300D681BD /* Controllers */,
+				044B667D21B61A8300D681BD /* Views */,
+			);
+			path = "ADLaunch<启动广告>";
+			sourceTree = "<group>";
+		};
+		044B667A21B61A8300D681BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				044B667B21B61A8300D681BD /* SJLaunchADController.h */,
+				044B667C21B61A8300D681BD /* SJLaunchADController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		044B667D21B61A8300D681BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				044B667E21B61A8300D681BD /* SJLanuchAdView.h */,
+				044B667F21B61A8300D681BD /* SJLanuchAdView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		044B668221B61BBF00D681BD /* Record<识别记录> */ = {
+			isa = PBXGroup;
+			children = (
+				044B668F21B61BDE00D681BD /* Controllers */,
+				044B668321B61BDE00D681BD /* Models */,
+				044B668621B61BDE00D681BD /* Views */,
+			);
+			path = "Record<识别记录>";
+			sourceTree = "<group>";
+		};
+		044B668321B61BDE00D681BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				044B668421B61BDE00D681BD /* OTRecordAdModel.h */,
+				044B668521B61BDE00D681BD /* OTRecordAdModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		044B668621B61BDE00D681BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				044B668721B61BDE00D681BD /* OTRecordAdCell.h */,
+				044B668821B61BDE00D681BD /* OTRecordAdCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		044B668F21B61BDE00D681BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				044B669021B61BDE00D681BD /* OTRecordController.h */,
+				044B669121B61BDE00D681BD /* OTRecordController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		044B669B21B6265800D681BD /* Recognition<识别过程> */ = {
+			isa = PBXGroup;
+			children = (
+				044B66A021B629B000D681BD /* Views */,
+				044B669F21B629A500D681BD /* Controllers */,
+			);
+			path = "Recognition<识别过程>";
+			sourceTree = "<group>";
+		};
+		044B669F21B629A500D681BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				044B669C21B6269E00D681BD /* OTRecognitionController.h */,
+				044B669D21B6269E00D681BD /* OTRecognitionController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		044B66A021B629B000D681BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */,
+				044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04F1720621ACE215005140C7 /* APP */ = {
 			isa = PBXGroup;
 			children = (
+				4B518CAA2186C6C10069EE8F /* OCRTool.pch */,
 				4B518C5921869E590069EE8F /* AppDelegate.h */,
 				4B518C5A21869E590069EE8F /* AppDelegate.m */,
 				4B518C6221869E590069EE8F /* Assets.xcassets */,
@@ -342,8 +472,11 @@
 		4B518C8B21869EAF0069EE8F /* General */ = {
 			isa = PBXGroup;
 			children = (
+				044B669B21B6265800D681BD /* Recognition<识别过程> */,
+				044B668221B61BBF00D681BD /* Record<识别记录> */,
+				044B667921B61A8300D681BD /* ADLaunch<启动广告> */,
 				4BBD016321A2EDC400413B14 /* Result<识别结果> */,
-				4B518C912186B9E60069EE8F /* Main */,
+				4B518C912186B9E60069EE8F /* Main<基类> */,
 				4B518C8D21869EC30069EE8F /* Home<主页面> */,
 			);
 			path = General;
@@ -355,7 +488,6 @@
 				4B454D4221AC2B1A008C9DEF /* Custom */,
 				4B7A567321913E8C00035EF2 /* Utils */,
 				4B518C8B21869EAF0069EE8F /* General */,
-				4B518CB52186D2CB0069EE8F /* Expand */,
 				4B518CA92186C6AC0069EE8F /* Resource */,
 				4B518CB62186D2F10069EE8F /* Vendors */,
 				4B518CBF2186F6050069EE8F /* Category */,
@@ -374,7 +506,7 @@
 			path = "Home<主页面>";
 			sourceTree = "<group>";
 		};
-		4B518C912186B9E60069EE8F /* Main */ = {
+		4B518C912186B9E60069EE8F /* Main<基类> */ = {
 			isa = PBXGroup;
 			children = (
 				4B7A567E2191565600035EF2 /* Models */,
@@ -382,7 +514,7 @@
 				4B518C982186BC9D0069EE8F /* ViewModels */,
 				4B518C922186B9F10069EE8F /* Controllers */,
 			);
-			path = Main;
+			path = "Main<基类>";
 			sourceTree = "<group>";
 		};
 		4B518C922186B9F10069EE8F /* Controllers */ = {
@@ -426,7 +558,9 @@
 		4B518CA92186C6AC0069EE8F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4B518CAA2186C6C10069EE8F /* OCRTool.pch */,
+				0400DA7521B6675F00EF56EB /* 识别失败.png */,
+				044B66A421B64A0600D681BD /* 识别中.gif */,
+				044B667321B61A3D00D681BD /* bannerAdIds.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -458,13 +592,6 @@
 				4B1BCE20219DB19400FC0DA8 /* SJView.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		4B518CB52186D2CB0069EE8F /* Expand */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Expand;
 			sourceTree = "<group>";
 		};
 		4B518CB62186D2F10069EE8F /* Vendors */ = {
@@ -509,6 +636,7 @@
 		4B7A567321913E8C00035EF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				044B667521B61A6500D681BD /* SJAdsUtil */,
 				4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */,
 				4B7A567421913E9600035EF2 /* SJColorUtil */,
 			);
@@ -636,8 +764,8 @@
 				4B518C5321869E590069EE8F /* Frameworks */,
 				4B518C5421869E590069EE8F /* Resources */,
 				406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */,
-				5219B52109878C9CCFE3078D /* [CP] Copy Pods Resources */,
 				4B7A567221913A3700035EF2 /* Embed Frameworks */,
+				E45498F26CA03DFD5B8E22B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -741,8 +869,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */,
 				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
+				0400DA7621B6675F00EF56EB /* 识别失败.png in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
+				044B66A521B64A0700D681BD /* 识别中.gif in Resources */,
 				4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */,
 				4B518C6321869E590069EE8F /* Assets.xcassets in Resources */,
 				4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */,
@@ -806,33 +937,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5219B52109878C9CCFE3078D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh",
-				"${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5C87083D448BA9771005335D /* [CP] Copy Pods Resources */ = {
@@ -916,6 +1033,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E45498F26CA03DFD5B8E22B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -927,18 +1063,25 @@
 				4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */,
 				4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */,
 				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
+				044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */,
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
+				044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */,
 				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
 				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
 				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
 				4B7A56822191566C00035EF2 /* SJModel.m in Sources */,
+				044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */,
 				4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */,
 				4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */,
 				4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */,
+				044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */,
 				4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */,
+				044B669321B61BDE00D681BD /* OTRecordAdCell.m in Sources */,
 				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,
 				4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */,
+				044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */,
+				044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */,
 				4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */,
 				4BB782B721AD74A600F918F4 /* ZZJBlockBarButtonItem.m in Sources */,
 				4B518C952186BA040069EE8F /* SJViewController.m in Sources */,
@@ -948,7 +1091,7 @@
 				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
-				4BB782DC21AD8B1500F918F4 /* SJInputToolBar.m in Sources */,
+				044B669721B61BDE00D681BD /* OTRecordController.m in Sources */,
 				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1113,7 +1256,7 @@
 					"$(PROJECT_DIR)/OCRTool/Class/Vendors/BDAipOCR",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/APP/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1140,7 +1283,7 @@
 					"$(PROJECT_DIR)/OCRTool/Class/Vendors/BDAipOCR",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/Class/Resource/OCRTool.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/APP/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion 显示完成回调
  */
 - (void)presentInController:(UIViewController *)controller type:(SJPresentationType)type animated:(BOOL)animated complete:(nullable void (^)(void))completion;
+- (void)dismiss;
 
 /** 点击背景视图是否消失 */
 @property (nonatomic, assign) BOOL backgroundDismissEnable;

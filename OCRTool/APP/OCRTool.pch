@@ -10,12 +10,16 @@
 #define OCRTool_pch
 
 // App
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define SJScreenWidth [UIScreen mainScreen].bounds.size.width
+#define SJScreenHeight [UIScreen mainScreen].bounds.size.height
 //获取导航栏+状态栏的高度
-#define kHeightForNavBarAndStatusBar self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height
+#define kHeightForNavBarAndStatusBar (self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height)
+// statusBar Height
+#define kStatusBarHeight ((CGRect)[[UIApplication sharedApplication] statusBarFrame]).size.height
+
 // weakSelf
 #define SJWeakSelf __weak typeof(self) weakSelf = self;
+
 // Category
 #import "UIColor+Expanded.h"
 #import "UIColor+HSV.h"
@@ -29,9 +33,13 @@
 #import <AipOcrSdk/AipOcrSdk.h>
 #import "ZZJBlockBarButtonItem.h"
 #import <UMShare/UMShare.h>
+#import <UMCommon/UMCommon.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import <YYKit/YYKit.h>
 
 
 // Utils
 #import "SJColorUtil.h"
+#import "SJAdsUtil.h"
 
 #endif /* OCRTool_pch */

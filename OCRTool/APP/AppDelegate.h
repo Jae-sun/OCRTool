@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/**
+ 更新根控制器
+ */
+- (void)updateRootController:(BOOL)showed;
 
 @end
 

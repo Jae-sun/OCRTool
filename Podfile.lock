@@ -1,5 +1,6 @@
 PODS:
   - Google-Mobile-Ads-SDK (7.36.0)
+  - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - UMCCommon (1.5.3)
@@ -32,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
+  - IQKeyboardManager
   - Masonry
   - MBProgressHUD (~> 1.1.0)
   - UMCCommon
@@ -45,6 +47,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Google-Mobile-Ads-SDK
+    - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - UMCCommon
@@ -54,6 +57,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 5bb4d2cea811842e104a24780caef63b4808e1bd
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   UMCShare: 552b29753f1b4da87b51d96545ed19e6263df397
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bec902cf3fb981dea87b00840d4121c37b4ff3ca
+PODFILE CHECKSUM: 84d3b71f2f6557ead6ba851f7d01e544c5ff7975
 
 COCOAPODS: 1.5.3

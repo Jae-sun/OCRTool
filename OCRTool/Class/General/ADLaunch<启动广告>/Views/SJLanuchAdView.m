@@ -35,14 +35,14 @@
 
 - (void)configSubviews {
     SJWeakSelf;
-    
-    self.backImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"launcher"]];
+    self.backImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lanch"]];
     [self addSubview:_backImgView];
     self.backImgView.contentMode = UIViewContentModeScaleAspectFit;
     [self.backImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(weakSelf);
+        make.left.equalTo(weakSelf).offset(10.f);
+        make.right.equalTo(weakSelf).offset(-10.f);
+        make.centerY.equalTo(weakSelf);
     }];
-
     GADBannerView *bannerView = [[GADBannerView alloc]
                                  initWithAdSize:GADAdSizeFromCGSize(
                                                                     CGSizeMake(kScreenWidth, kScreenHeight))];
@@ -61,7 +61,7 @@
         make.right.equalTo(weakSelf).offset(-20.f);
         make.size.mas_equalTo(CGSizeMake(70, 36));
     }];
-    [self.cutdownButton setTitle:@"5S" forState:UIControlStateNormal];
+    [self.cutdownButton setTitle:@"3S" forState:UIControlStateNormal];
     self.cutdownButton.layer.cornerRadius = 5.f;
     self.cutdownButton.layer.masksToBounds = YES;
     self.cutdownButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
@@ -71,11 +71,11 @@
 #pragma mark - GADBannerViewDelegate
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     NSLog(@"succesfully");
-    self.leftSeconds = 5;
+    self.leftSeconds = 3;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     self.cutdownButton.hidden = NO;
     self.bannerView.hidden = NO;
-    
+    self.cutdownButton.enabled = NO;
 }
 
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
@@ -94,10 +94,12 @@
 
 - (void)timerAction:(NSTimer *)sender {
     self.leftSeconds--;
-    if(self.leftSeconds < 0){
+    if(self.leftSeconds == 0){
         [self.timer invalidate];
         if (self.delegate && [self.delegate respondsToSelector:@selector(finshedInLanuchAdView:)]) {
-            [self.delegate finshedInLanuchAdView:self];
+//            [self.delegate finshedInLanuchAdView:self];
+            [self.cutdownButton setTitle:@"跳过" forState:UIControlStateNormal];
+            self.cutdownButton.enabled = YES;
         }
     }
 }

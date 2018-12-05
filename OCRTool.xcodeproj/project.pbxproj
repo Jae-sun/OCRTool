@@ -46,6 +46,7 @@
 		4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */; };
 		4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB92186F5E30069EE8F /* UIColor+HSV.m */; };
 		4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */; };
+		4B6A539A21B8185D00715454 /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A539921B8185D00715454 /* SJInputToolBar.m */; };
 		4B7A566C21913A3700035EF2 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; };
 		4B7A566D21913A3700035EF2 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B7A566E21913A3700035EF2 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5667219138B700035EF2 /* AipOcrSdk.framework */; };
@@ -186,6 +187,8 @@
 		4B518CBA2186F5E30069EE8F /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
 		4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 		4B518CBC2186F5E30069EE8F /* UIColor+HSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSV.h"; sourceTree = "<group>"; };
+		4B6A539821B8185D00715454 /* SJInputToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
+		4B6A539921B8185D00715454 /* SJInputToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
 		4B7A5666219138B700035EF2 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		4B7A5667219138B700035EF2 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		4B7A5668219138B700035EF2 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
@@ -723,6 +726,8 @@
 				4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */,
 				4B454D3F21AC2B10008C9DEF /* SJShareAlertView.h */,
 				4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */,
+				4B6A539821B8185D00715454 /* SJInputToolBar.h */,
+				4B6A539921B8185D00715454 /* SJInputToolBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -927,12 +932,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
@@ -1017,6 +1024,7 @@
 				4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */,
 				4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */,
 				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
+				4B6A539A21B8185D00715454 /* SJInputToolBar.m in Sources */,
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
 				044B669721B61BDE00D681BD /* OTRecordController.m in Sources */,

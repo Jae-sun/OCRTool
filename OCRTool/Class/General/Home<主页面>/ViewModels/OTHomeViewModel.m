@@ -17,7 +17,7 @@
 @implementation OTHomeViewModel
 
 - (void)configDatas {
-    NSArray *titles = @[@"文字识别",@"高精度识别",@"身份证（前）",@"身份证（后）",@"银行卡",@"驾驶证"];
+    NSArray *titles = @[@"文字识别",@"高精度识别",@"身份证(前)",@"身份证(后)",@"银行卡",@"驾驶证"];
     NSArray *imgNames = titles;
     NSArray *colors = @[@"eb644b",@"ffc524",@"37b6c9",@"ff864f",@"98d56e",@"71ace9"];
     NSMutableArray *tempArr = [NSMutableArray arrayWithCapacity:6];

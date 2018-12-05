@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SJLaunchADController : UIViewController
 
-- (instancetype)initWithAdBannerView:(GADBannerView *)adBannerView;
-
 @end
 
 NS_ASSUME_NONNULL_END

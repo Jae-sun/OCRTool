@@ -17,8 +17,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
- 
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
+     [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self updateRootController:NO];
 
@@ -27,7 +26,6 @@
     [self configUSharePlatforms];
     
     [[AipOcrService shardService] authWithAK:@"oehGlhGqfVbccSPhh5i4UpCk" andSK:@"yhQTeknEMRaet9yzXr8RBUbvAoK3HfTn"];
-    
     return YES;
 }
 

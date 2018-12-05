@@ -18,7 +18,7 @@ target 'OCRTool' do
   pod 'UMCShare/Social/SMS'          # 集成短信
   # 集成谷歌广告AdMob
   pod 'Google-Mobile-Ads-SDK'
-
+  pod 'IQKeyboardManager'
   pod 'YYKit'
   pod 'MBProgressHUD', '~> 1.1.0'
   

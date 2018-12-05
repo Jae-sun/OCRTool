@@ -8,7 +8,9 @@
 
 #import "OTResultController.h"
 #import "SJShareAlertView.h"
-@interface OTResultController ()<SJShareAlertViewDelegate>
+#import "SJInputToolBar.h"
+
+@interface OTResultController ()<SJShareAlertViewDelegate,SJInputToolBarDelegate>
 
 @property (nonatomic, strong) UITextView *textView;
 
@@ -35,7 +37,11 @@
 
 - (void)configSubviews {
     self.textView = [[UITextView alloc] initWithFrame:CGRectZero];
+    self.textView.font = [UIFont systemFontOfSize:14.f];
     [self.view addSubview:self.textView];
+    SJInputToolBar *toolBar = [[SJInputToolBar alloc] init];
+    self.textView.inputAccessoryView = toolBar;
+    toolBar.delegate = self;
     SJWeakSelf;
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view);
@@ -43,8 +49,8 @@
     self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
         [weakSelf.navigationController popToRootViewControllerAnimated:YES];
     }];
-    
     self.navigationItem.rightBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"分享"] eventHandler:^{
+        [self.textView resignFirstResponder];
         CGFloat height = [UIScreen mainScreen].bounds.size.width / 3.0f * 2 + 54.f;
         SJShareAlertView *alertView = [[SJShareAlertView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
         alertView.delegate = self;
@@ -138,10 +144,20 @@
     [self shareTextToPlatformType:type];
 }
 
-
 - (void)shareAlertView:(UIView *)alertView clickCancelButton:(UIButton *)button {
     NSLog(@"the alert controller canceled!");
     [self.alertController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark SJInputToolBarDelegate
+- (void)inputToolBar:(UIView *)toolBar clickedButton:(UIButton *)button {
+    [self.textView resignFirstResponder];
+    if ([button.titleLabel.text isEqualToString:@"完成"]) {
+        
+    }
+    else if([button.titleLabel.text isEqualToString:@"取消"]) {
+        
+    }
 }
 
 #pragma mark GADInterstitialDelegate

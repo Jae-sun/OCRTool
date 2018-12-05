@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SJLaunchADController.h"
 NS_ASSUME_NONNULL_BEGIN
 @protocol SJLanuchAdViewDelegate <NSObject>
 
 - (void)lanuchAdView:(UIView *)view clickedLanuchAdViewButton:(UIButton *)button;
 
+- (void)finshedInLanuchAdView:(UIView *)view;
+
 @end
 
 @interface SJLanuchAdView : UIView
 
-@property (nonatomic, strong) UIViewController *controller;
+@property (nonatomic, strong) SJLaunchADController *controller;
 
 @property (nonatomic, weak) id<SJLanuchAdViewDelegate> delegate;
 

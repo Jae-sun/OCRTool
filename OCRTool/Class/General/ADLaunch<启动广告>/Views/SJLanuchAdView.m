@@ -13,7 +13,13 @@
 /** 广告 */
 @property (nonatomic, strong) GADBannerView *bannerView;
 
+@property (nonatomic, strong) UIImageView *backImgView;
+
 @property (nonatomic, strong) UIButton *cutdownButton;
+
+@property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, assign) NSInteger leftSeconds;
 
 @end
 
@@ -29,45 +35,54 @@
 
 - (void)configSubviews {
     SJWeakSelf;
-    self.bannerView = [[GADBannerView alloc]
-                       initWithAdSize:GADAdSizeFromCGSize(
-                                                          CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height))];
+    
+    self.backImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"launcher"]];
+    [self addSubview:_backImgView];
+    self.backImgView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.backImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf);
+    }];
+
+    GADBannerView *bannerView = [[GADBannerView alloc]
+                                 initWithAdSize:GADAdSizeFromCGSize(
+                                                                    CGSizeMake(kScreenWidth, kScreenHeight))];
+    bannerView.delegate = self;
+    self.bannerView = bannerView;
     [self addSubview:self.bannerView];
     [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(weakSelf);
-        make.top.equalTo(weakSelf).offset(kStatusBarHeight);
     }];
-    self.bannerView.delegate = self;
+    self.bannerView.hidden = YES;
     
     self.cutdownButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:self.cutdownButton];
- 
     [self.cutdownButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.bannerView).offset(25.f);
+        make.top.equalTo(weakSelf).offset(kStatusBarHeight + 10);
         make.right.equalTo(weakSelf).offset(-20.f);
         make.size.mas_equalTo(CGSizeMake(70, 36));
     }];
-    [self.cutdownButton setTitle:@"跳过" forState:UIControlStateNormal];
-    self.cutdownButton.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.3];
+    [self.cutdownButton setTitle:@"5S" forState:UIControlStateNormal];
+    self.cutdownButton.layer.cornerRadius = 5.f;
+    self.cutdownButton.layer.masksToBounds = YES;
+    self.cutdownButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
     [self.cutdownButton addTarget:self action:@selector(cutdownButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.cutdownButton.hidden = YES;
 }
-- (void)setController:(UIViewController *)controller {
-    _controller = controller;
-    self.bannerView.rootViewController = controller;
-    self.bannerView.adUnitID = @"ca-app-pub-6278538217166206/8657080456";
-    GADRequest *request = [GADRequest request];
-    [self.bannerView loadRequest:request];
-    [GADMobileAds sharedInstance] ;
-}
-
 #pragma mark - GADBannerViewDelegate
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
     NSLog(@"succesfully");
+    self.leftSeconds = 5;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+    self.cutdownButton.hidden = NO;
+    self.bannerView.hidden = NO;
+    
 }
 
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
     NSLog(@"Failed to receive ad: %@", error.localizedDescription);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(finshedInLanuchAdView:)]) {
+        [self.delegate finshedInLanuchAdView:self];
+    }
 }
 
 #pragma mark - Action
@@ -76,4 +91,32 @@
         [self.delegate lanuchAdView:self clickedLanuchAdViewButton:sender];
     }
 }
+
+- (void)timerAction:(NSTimer *)sender {
+    self.leftSeconds--;
+    if(self.leftSeconds < 0){
+        [self.timer invalidate];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(finshedInLanuchAdView:)]) {
+            [self.delegate finshedInLanuchAdView:self];
+        }
+    }
+}
+
+#pragma mark- Setter
+- (void)setLeftSeconds:(NSInteger)leftSeconds {
+    _leftSeconds = leftSeconds;
+    NSString *titie = [NSString stringWithFormat:@"%ldS",(long)leftSeconds];
+    [self.cutdownButton setTitle:titie forState:UIControlStateNormal];
+}
+
+- (void)setController:(SJLaunchADController *)controller {
+    _controller = controller;
+    self.bannerView.rootViewController = controller;
+    self.bannerView.adUnitID = @"ca-app-pub-6278538217166206/8657080456";
+    GADRequest *request = [GADRequest request];
+    [self.bannerView loadRequest:request];
+}
+
+
+
 @end

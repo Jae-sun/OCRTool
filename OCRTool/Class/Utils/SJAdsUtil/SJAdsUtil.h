@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 启动页广告
 + (NSString *)lanuchAdId;
 
+// 识别结果页插屏广告
++ (NSString *)resultInterstitialAdId;
+
 @end
 
 NS_ASSUME_NONNULL_END

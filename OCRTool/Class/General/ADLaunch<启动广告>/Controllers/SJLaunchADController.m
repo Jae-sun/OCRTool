@@ -10,10 +10,11 @@
 #import "AppDelegate.h"
 #import "SJLanuchAdView.h"
 
-@interface SJLaunchADController ()<GADInterstitialDelegate,SJLanuchAdViewDelegate>
-/// The interstitial ad.
-@property(nonatomic, strong) GADInterstitial *interstitial;
+@interface SJLaunchADController ()<SJLanuchAdViewDelegate>
 
+/** 广告页面 */
+@property (nonatomic, strong) SJLanuchAdView *adView;
+@property (nonatomic, strong) GADBannerView *bannerView;
 @end
 
 @implementation SJLaunchADController
@@ -29,10 +30,16 @@
     [adView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view);
     }];
+    self.adView = adView;
 }
 
 #pragma mark - SJLanuchAdViewDelegate
 - (void)lanuchAdView:(UIView *)view clickedLanuchAdViewButton:(UIButton *)button {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate updateRootController:YES];
+}
+
+- (void)finshedInLanuchAdView:(UIView *)view {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate updateRootController:YES];
 }

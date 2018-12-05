@@ -26,4 +26,9 @@
 + (NSString *)lanuchAdId {
     return @"ca-app-pub-6278538217166206/8657080456";
 }
+
+// 识别结果页插屏广告
++ (NSString *)resultInterstitialAdId {
+    return @"ca-app-pub-6278538217166206/7708689238";
+}
 @end

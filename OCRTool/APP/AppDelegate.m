@@ -19,11 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
  
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self updateRootController:NO];
-    
-    [UMConfigure setLogEnabled:YES];//设置打开日志
+
+    [UMConfigure setLogEnabled:NO];//设置打开日志
     [UMConfigure initWithAppkey:@"5bfbfc6ff1f55629480003bc" channel:@"App Store"];
     [self configUSharePlatforms];
     
@@ -34,7 +33,7 @@
 
 // 支持所有iOS系统
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    // 6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
     if (!result) {
         // 其他如支付等SDK的回调
@@ -80,8 +79,7 @@
 }
 
 #pragma mark- Private
-- (void)configUSharePlatforms
-{
+- (void)configUSharePlatforms {
     /* 设置微信的appKey和appSecret */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx995b53fcb58cbb7c" appSecret:@"86529793b01c1078756d870008e807f6" redirectURL:@"https://jaesun.oschina.io/"];
     /* 设置分享到QQ互联的appID
@@ -89,4 +87,5 @@
      */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101523189"/*设置QQ平台的appID*/  appSecret:nil redirectURL:@"https://jaesun.oschina.io/"];
 }
+
 @end

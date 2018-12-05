@@ -18,6 +18,9 @@
 		044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669D21B6269E00D681BD /* OTRecognitionController.m */; };
 		044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */; };
 		044B66A521B64A0700D681BD /* 识别中.gif in Resources */ = {isa = PBXBuildFile; fileRef = 044B66A421B64A0600D681BD /* 识别中.gif */; };
+		04A76C8121B77DEB00907020 /* OTRecordCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */; };
+		04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */ = {isa = PBXBuildFile; fileRef = 04A7EA6721B776AD000A74D0 /* ocrtool.md */; };
+		04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */; };
 		26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */; };
 		3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */; };
 		4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */; };
@@ -126,6 +129,11 @@
 		044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionAdLoadView.h; sourceTree = "<group>"; };
 		044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionAdLoadView.m; sourceTree = "<group>"; };
 		044B66A421B64A0600D681BD /* 识别中.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "识别中.gif"; sourceTree = "<group>"; };
+		04A76C7F21B77DEB00907020 /* OTRecordCoreDataUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordCoreDataUtil.h; sourceTree = "<group>"; };
+		04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordCoreDataUtil.m; sourceTree = "<group>"; };
+		04A7EA6721B776AD000A74D0 /* ocrtool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ocrtool.md; sourceTree = "<group>"; };
+		04A7EA6921B777A8000A74D0 /* OTRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordModel.h; sourceTree = "<group>"; };
+		04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordModel.m; sourceTree = "<group>"; };
 		2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool.debug.xcconfig"; sourceTree = "<group>"; };
 		434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +215,6 @@
 		4BB782D421AD755E00F918F4 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		4BB782D621AD756600F918F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4BB782D821AD756D00F918F4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		4BB782DA21AD8B1500F918F4 /* SJInputToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
-		4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
 		4BBD016721A2EE2200413B14 /* OTResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTResultController.h; sourceTree = "<group>"; };
 		4BBD016821A2EE2200413B14 /* OTResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTResultController.m; sourceTree = "<group>"; };
 		58BE2E1321AF301CC364AF4D /* Pods-OCRToolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +317,8 @@
 			children = (
 				044B668421B61BDE00D681BD /* OTRecordAdModel.h */,
 				044B668521B61BDE00D681BD /* OTRecordAdModel.m */,
+				04A7EA6921B777A8000A74D0 /* OTRecordModel.h */,
+				04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +424,8 @@
 			children = (
 				4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */,
 				4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */,
+				04A76C7F21B77DEB00907020 /* OTRecordCoreDataUtil.h */,
+				04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */,
 			);
 			path = SJCoreDataUtil;
 			sourceTree = "<group>";
@@ -423,6 +433,7 @@
 		4B518C4D21869E590069EE8F = {
 			isa = PBXGroup;
 			children = (
+				04A7EA6721B776AD000A74D0 /* ocrtool.md */,
 				4B518C5821869E590069EE8F /* OCRTool */,
 				4B518C7121869E590069EE8F /* OCRToolTests */,
 				4B518C7C21869E590069EE8F /* OCRToolUITests */,
@@ -708,8 +719,6 @@
 		4BBD016621A2EE0E00413B14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4BB782DA21AD8B1500F918F4 /* SJInputToolBar.h */,
-				4BB782DB21AD8B1500F918F4 /* SJInputToolBar.m */,
 				4B454D3C21AC2B10008C9DEF /* SJShareAlertCell.h */,
 				4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */,
 				4B454D3F21AC2B10008C9DEF /* SJShareAlertView.h */,
@@ -765,7 +774,6 @@
 				4B518C5421869E590069EE8F /* Resources */,
 				406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */,
 				4B7A567221913A3700035EF2 /* Embed Frameworks */,
-				E45498F26CA03DFD5B8E22B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -784,8 +792,6 @@
 				4B518C6A21869E590069EE8F /* Sources */,
 				4B518C6B21869E590069EE8F /* Frameworks */,
 				4B518C6C21869E590069EE8F /* Resources */,
-				B1719CF186A5CFFB89F456DD /* [CP] Embed Pods Frameworks */,
-				39D3E8B9E2BBC2582357C9D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -805,8 +811,6 @@
 				4B518C7521869E590069EE8F /* Sources */,
 				4B518C7621869E590069EE8F /* Frameworks */,
 				4B518C7721869E590069EE8F /* Resources */,
-				C3E65D664C10BA0B60E54851 /* [CP] Embed Pods Frameworks */,
-				5C87083D448BA9771005335D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -874,6 +878,7 @@
 				0400DA7621B6675F00EF56EB /* 识别失败.png in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
 				044B66A521B64A0700D681BD /* 识别中.gif in Resources */,
+				04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */,
 				4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */,
 				4B518C6321869E590069EE8F /* Assets.xcassets in Resources */,
 				4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */,
@@ -915,21 +920,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		39D3E8B9E2BBC2582357C9D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		406692B5586215A1325C9086 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -952,21 +942,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C87083D448BA9771005335D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9BE885ED91323D436AF302D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -983,36 +958,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1719CF186A5CFFB89F456DD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C3E65D664C10BA0B60E54851 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDCECA29BB229B02FAD53FE4 /* [CP] Check Pods Manifest.lock */ = {
@@ -1033,25 +978,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E45498F26CA03DFD5B8E22B2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh",
-				"${PODS_ROOT}/UMCShare/UMShare/UMSocialSDKPlugin/UMSocialSDKPromptResources.bundle",
-				"${PODS_ROOT}/UMCShare/UMShare/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1067,6 +993,7 @@
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
 				044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */,
+				04A76C8121B77DEB00907020 /* OTRecordCoreDataUtil.m in Sources */,
 				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
 				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
 				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
@@ -1076,6 +1003,7 @@
 				4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */,
 				4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */,
 				044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */,
+				04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */,
 				4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */,
 				044B669321B61BDE00D681BD /* OTRecordAdCell.m in Sources */,
 				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,

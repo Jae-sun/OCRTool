@@ -18,7 +18,7 @@
     void (^_failHandler)(NSError *);
 }
 
-/** <#注释#> */
+/** 记载页面 */
 @property (nonatomic, strong) OTRecognitionAdLoadView *adLoadView;
 
 @end
@@ -34,7 +34,34 @@
     }];
     [self configSubviews];
     [self configCallback];
-    [self generalRecognition];
+    switch (self.recognitionType) {
+            case 0:{
+                [self generalOCR];
+            }
+            break;
+            case 1:{
+                [self generalAccurateOCR];
+            }
+            break;
+            case 2:{
+                [self idcardOCROnlineFront];
+            }
+            break;
+            case 3:{
+                [self idcardOCROnlineBack];
+            }
+            break;
+            case 4:{
+                [self bankCardOCROnline];
+            }
+            break;
+            case 5:{
+                [self drivingLicenseOCR];
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)configSubviews {
@@ -48,10 +75,52 @@
 }
 
 // 通用文字识别
-- (void)generalRecognition {
+- (void)generalOCR {
     NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
     [[AipOcrService shardService] detectTextFromImage:self.image withOptions:options successHandler:_successHandler failHandler:_failHandler];
 }
+
+// 精确识别文字
+- (void)generalAccurateOCR{
+    NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+    [[AipOcrService shardService] detectTextAccurateFromImage:self.image
+                                                      withOptions:options
+                                                   successHandler:_successHandler
+                                                      failHandler:_failHandler];
+        
+}
+
+// 身份证（前）
+- (void)idcardOCROnlineFront {
+    [[AipOcrService shardService] detectIdCardFrontFromImage:self.image
+                                                 withOptions:nil
+                                              successHandler:_successHandler
+                                                 failHandler:_failHandler];
+}
+
+// 身份证（后）
+- (void)idcardOCROnlineBack {
+    [[AipOcrService shardService] detectIdCardBackFromImage:self.image
+                                                withOptions:nil
+                                             successHandler:_successHandler
+                                                failHandler:_failHandler];
+}
+
+// 银行卡
+- (void)bankCardOCROnline {
+    [[AipOcrService shardService] detectBankCardFromImage:self.image
+                                           successHandler:_successHandler
+                                              failHandler:_failHandler];
+}
+
+// 驾驶证
+- (void)drivingLicenseOCR {
+    [[AipOcrService shardService] detectDrivingLicenseFromImage:self.image
+                                                    withOptions:nil
+                                                 successHandler:_successHandler
+                                                    failHandler:_failHandler];
+}
+
 
 #pragma mark- other
 - (void)configCallback {

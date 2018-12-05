@@ -95,6 +95,11 @@
             [pasteboard setString:self.textView.text];
             if ([pasteboard.string isEqualToString:self.textView.text]) {
                 NSLog(@"复制成功");
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                hud.label.text = @"复制成功";
+                hud.mode = MBProgressHUDModeText;
+                hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+                [hud hideAnimated:YES afterDelay:1.5f];
             }
             return;
         }

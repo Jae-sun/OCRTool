@@ -36,7 +36,7 @@
 #import <UMCommon/UMCommon.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <YYKit/YYKit.h>
-
+#import "MBProgressHUD.h"
 
 // Utils
 #import "SJColorUtil.h"

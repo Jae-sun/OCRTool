@@ -72,21 +72,21 @@
     if ([model.title isEqualToString:@"文字识别"]) {
         [self generalOCR];
     }
-//    else if ([model.title isEqualToString:@"高精度识别"]) {
-//        [self generalAccurateOCR];
-//    }
-//    else if ([model.title isEqualToString:@"身份证（前）"]) {
-//        [self idcardOCROnlineFront];
-//    }
-//    else if ([model.title isEqualToString:@"身份证（后）"]) {
-//        [self idcardOCROnlineBack];
-//    }
-//    else if ([model.title isEqualToString:@"银行卡"]) {
-//        [self bankCardOCROnline];
-//    }
-//    else if ([model.title isEqualToString:@"驾驶证"]) {
-//        [self drivingLicenseOCR];
-//    }
+    else if ([model.title isEqualToString:@"高精度识别"]) {
+        [self generalAccurateOCR];
+    }
+    else if ([model.title isEqualToString:@"身份证（前）"]) {
+        [self idcardOCROnlineFront];
+    }
+    else if ([model.title isEqualToString:@"身份证（后）"]) {
+        [self idcardOCROnlineBack];
+    }
+    else if ([model.title isEqualToString:@"银行卡"]) {
+        [self bankCardOCROnline];
+    }
+    else if ([model.title isEqualToString:@"驾驶证"]) {
+        [self drivingLicenseOCR];
+    }
 }
 
 - (void)homeView:(UIView *)view clickedButton:(UIButton *)button {
@@ -95,93 +95,83 @@
 }
 
 #pragma mark - Action
+- (void)handlerWithImg:(UIImage *)img type:(NSInteger)type {
+    SJWeakSelf;
+    [self.presentedController dismissViewControllerAnimated:NO completion:^{
+        OTRecognitionController *vc = [[OTRecognitionController alloc] init];
+        vc.image = img;
+        vc.recognitionType = type;
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
+    
+}
 // 普通文字识别
 - (void)generalOCR {
     SJWeakSelf;
     self.presentedController = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
         // 在这个block里，image即为切好的图片，可自行选择如何处理
-        [weakSelf.presentedController dismissViewControllerAnimated:NO completion:nil];
-        OTRecognitionController *vc = [[OTRecognitionController alloc] init];
-        vc.image = image;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+        [weakSelf handlerWithImg:image type:0];
     }];
     [self presentViewController:self.presentedController animated:YES completion:nil];
 }
 
-//// 精确识别文字
-//- (void)generalAccurateOCR{
-//
-//    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-//        NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
-//        [[AipOcrService shardService] detectTextAccurateFromImage:image
-//                                                      withOptions:options
-//                                                   successHandler:_successHandler
-//                                                      failHandler:_failHandler];
-//
-//    }];
-//    [self presentViewController:vc animated:YES completion:nil];
-//     self.presentedController = vc;
-//}
-//
-//// 身份证（前）
-//- (void)idcardOCROnlineFront {
-//    UIViewController * vc =
-//    [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont
-//                                 andImageHandler:^(UIImage *image) {
-//
-//                                     [[AipOcrService shardService] detectIdCardFrontFromImage:image
-//                                                                                  withOptions:nil
-//                                                                               successHandler:_successHandler
-//                                                                                  failHandler:_failHandler];
-//                                 }];
-//
-//    [self presentViewController:vc animated:YES completion:nil];
-//     self.presentedController = vc;
-//
-//}
-//
-//// 身份证（后）
-//- (void)idcardOCROnlineBack {
-//    UIViewController * vc =
-//    [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardBack
-//                                 andImageHandler:^(UIImage *image) {
-//                                     [[AipOcrService shardService] detectIdCardBackFromImage:image
-//                                                                                 withOptions:nil
-//                                                                              successHandler:_successHandler
-//                                                                                 failHandler:_failHandler];
-//                                 }];
-//    [self presentViewController:vc animated:YES completion:nil];
-//     self.presentedController = vc;
-//}
-//
-//// 银行卡
-//- (void)bankCardOCROnline {
-//    UIViewController * vc =
-//    [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard
-//                                 andImageHandler:^(UIImage *image) {
-//                                     [[AipOcrService shardService] detectBankCardFromImage:image
-//                                                                            successHandler:_successHandler
-//                                                                               failHandler:_failHandler];
-//                                 }];
-//    [self presentViewController:vc animated:YES completion:nil];
-//    self.presentedController = vc;
-//
-//}
-//
-//// 驾驶证
-//- (void)drivingLicenseOCR {
-//
-//    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-//
-//        [[AipOcrService shardService] detectDrivingLicenseFromImage:image
-//                                                        withOptions:nil
-//                                                     successHandler:_successHandler
-//                                                        failHandler:_failHandler];
-//
-//    }];
-//    [self presentViewController:vc animated:YES completion:nil];
-//    self.presentedController = vc;
-//}
+// 精确识别文字
+- (void)generalAccurateOCR {
+    SJWeakSelf;
+    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+        [weakSelf handlerWithImg:image type:1];
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+}
+
+// 身份证（前）
+- (void)idcardOCROnlineFront {
+    SJWeakSelf;
+    UIViewController * vc =
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont
+                                 andImageHandler:^(UIImage *image) {
+                                     [weakSelf handlerWithImg:image type:2];
+                                 }];
+
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+}
+
+// 身份证（后）
+- (void)idcardOCROnlineBack {
+    SJWeakSelf;
+    UIViewController * vc =
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardBack
+                                 andImageHandler:^(UIImage *image) {
+                                     [weakSelf handlerWithImg:image type:3];
+                                 }];
+    [self presentViewController:vc animated:YES completion:nil];
+     self.presentedController = vc;
+}
+
+// 银行卡
+- (void)bankCardOCROnline {
+    SJWeakSelf;
+    UIViewController * vc =
+    [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard
+                                 andImageHandler:^(UIImage *image) {
+                                     [weakSelf handlerWithImg:image type:4];
+                                 }];
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+
+}
+
+// 驾驶证
+- (void)drivingLicenseOCR {
+    SJWeakSelf;
+    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+        [weakSelf handlerWithImg:image type:5];
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
+    self.presentedController = vc;
+}
 
 #pragma mark- setter / getter
 - (OTHomeViewModel *)viewModel {

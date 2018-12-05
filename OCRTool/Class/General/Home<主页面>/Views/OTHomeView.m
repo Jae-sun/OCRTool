@@ -65,9 +65,9 @@
 }
 
 - (void)configSettingButton {
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth - 51.f,kScreenHeight - 76,46.f,46.f)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth - 51.f,kScreenHeight - 76,36.f,36.f)];
     [btn setImage:[UIImage imageNamed:@"more"]  forState:UIControlStateNormal];
-    btn.layer.cornerRadius = 8.f;
+    btn.layer.cornerRadius = 4.f;
     btn.layer.masksToBounds = YES;
     [self addSubview:btn];
     self.settingButton = btn;

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OTResultController : UIViewController
+@interface OTResultController : UIViewController<GADInterstitialDelegate>
 
 /** 扫描结果 **/
 @property (nonatomic, copy) id result;
+
+/// The interstitial ad.
+@property(nonatomic, strong) GADInterstitial *interstitial;
 
 @end

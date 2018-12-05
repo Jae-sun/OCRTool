@@ -17,7 +17,6 @@
     // 默认的识别失败的回调
     void (^_failHandler)(NSError *);
 }
-
 /** 记载页面 */
 @property (nonatomic, strong) OTRecognitionAdLoadView *adLoadView;
 
@@ -128,9 +127,14 @@
     // 这是默认的识别成功的回调
     _successHandler = ^(id result){
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            OTResultController *VC = [[OTResultController alloc] init];
+            VC.result = result;
+            VC.interstitial = [[GADInterstitial alloc]
+                                 initWithAdUnitID:[SJAdsUtil resultInterstitialAdId]];
+            VC.interstitial.delegate = VC;
+            GADRequest *request = [GADRequest request];
+            [VC.interstitial loadRequest:request];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                OTResultController *VC = [[OTResultController alloc] init];
-                VC.result = result;
                 [weakSelf.navigationController pushViewController:VC animated:YES];
             });
         }];

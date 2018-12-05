@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong)  SJCustomAlertController *alertController;
 
+
 @end
 
 @implementation OTResultController
@@ -23,6 +24,13 @@
     self.title = @"识别结果";
     [self configSubviews];
     [self configDatas];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([self.interstitial isReady]) {
+        [self.interstitial presentFromRootViewController:self];
+    }
 }
 
 - (void)configSubviews {
@@ -49,7 +57,6 @@
 
 - (void)configDatas {
     NSMutableString *message = [NSMutableString string];
-    
     if(self.result[@"words_result"]) {
         if([self.result[@"words_result"] isKindOfClass:[NSDictionary class]]){
             [self.result[@"words_result"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
@@ -65,10 +72,10 @@
             for(NSDictionary *obj in self.result[@"words_result"]){
                 if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
                     [message appendFormat:@"%@\n", obj[@"words"]];
-                }else{
+                }
+                else {
                     [message appendFormat:@"%@\n", obj];
                 }
-                
             }
         }
     }
@@ -136,6 +143,12 @@
     NSLog(@"the alert controller canceled!");
     [self.alertController dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark GADInterstitialDelegate
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
+    
+}
+
 
 #pragma mark- Private Method
 - (void)shareTextToPlatformType:(UMSocialPlatformType)platformType {

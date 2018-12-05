@@ -41,17 +41,19 @@
         make.center.equalTo(weakSelf);
         make.size.mas_equalTo(CGSizeMake(kScreenWidth * 0.5, kScreenWidth * 0.5));
     }];
-    self.topBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, kScreenHeight * 0.5 - kScreenWidth * 0.25 - 88)];
+   
+    self.topBannerView = [self bannerViewWithSize:CGSizeMake(80, 300)];
     [self addSubview:self.topBannerView];
     [self.topBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(weakSelf);
-        make.bottom.equalTo(weakSelf.loadingView.mas_top);
+        make.left.equalTo(weakSelf);
+        make.centerY.equalTo(weakSelf);
     }];
-    self.bottomBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, kScreenHeight * 0.5 - kScreenWidth * 0.25)];
+    
+    self.bottomBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, 80)];
     [self addSubview:self.bottomBannerView];
     [self.bottomBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(weakSelf);
-        make.top.equalTo(weakSelf.loadingView.mas_bottom);
+        make.bottom.equalTo(weakSelf);
     }];
 }
 

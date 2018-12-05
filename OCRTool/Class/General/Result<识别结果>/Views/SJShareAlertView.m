@@ -36,6 +36,7 @@
     }
     return self;
 }
+
 // 配置子视图
 - (void)configSubviews {
     // 标题

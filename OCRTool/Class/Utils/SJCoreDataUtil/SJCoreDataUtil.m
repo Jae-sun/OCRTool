@@ -61,7 +61,7 @@
         NSError *error;
         NSURL *SQLiteURL = [self coreDataURL];
         if (!SQLiteURL) {
-            NSLog(@"获取数据k存储路径失败");
+            NSLog(@"获取数据存储路径失败");
             return nil;
         }
         [_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType

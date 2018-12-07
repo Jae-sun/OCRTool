@@ -28,13 +28,6 @@
     [self configDatas];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    if ([self.interstitial isReady]) {
-        [self.interstitial presentFromRootViewController:self];
-    }
-}
-
 - (void)configSubviews {
     self.textView = [[UITextView alloc] initWithFrame:CGRectZero];
     self.textView.font = [UIFont systemFontOfSize:14.f];
@@ -47,7 +40,12 @@
         make.edges.equalTo(weakSelf.view);
     }];
     self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
-        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+        if (self.result) {
+            [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+        }
+        else {
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        }
     }];
     self.navigationItem.rightBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"分享"] eventHandler:^{
         [self.textView resignFirstResponder];
@@ -62,6 +60,16 @@
 }
 
 - (void)configDatas {
+    if (self.result) {
+        [self freshData];
+    }
+    else if(self.recordModel) {
+        self.textView.text = self.recordModel.resultTxt;
+        [OTRecordCoreDataUtil shareInstance].curRecord = self.recordModel;
+    }
+}
+
+- (void)freshData {
     NSMutableString *message = [NSMutableString string];
     if(self.result[@"words_result"]) {
         if([self.result[@"words_result"] isKindOfClass:[NSDictionary class]]){
@@ -92,6 +100,17 @@
         [message appendFormat:@"失效日期：%@\n",resultDic[@"valid_date"]];
     }
     self.textView.text = message;
+    [OTRecordCoreDataUtil shareInstance].curRecord.recordID = [NSString nowTimeTimestamp].intValue;
+    [OTRecordCoreDataUtil shareInstance].curRecord.resultTime = [NSString nowTimeTimestamp].intValue;
+    [OTRecordCoreDataUtil shareInstance].curRecord.resultTxt = message;
+    [[OTRecordCoreDataUtil shareInstance] saveCurRecordComplete:^(BOOL success, NSError * _Nonnull error) {
+        if (success) {
+            NSLog(@"保存成功");
+        }
+        else {
+            NSLog(@"保存失败：%@",error.localizedDescription);
+        }
+    }];
 }
 
 #pragma mark- Delegate/DataSource
@@ -153,18 +172,15 @@
 - (void)inputToolBar:(UIView *)toolBar clickedButton:(UIButton *)button {
     [self.textView resignFirstResponder];
     if ([button.titleLabel.text isEqualToString:@"完成"]) {
-        
+        [OTRecordCoreDataUtil shareInstance].curRecord.resultTxt = self.textView.text;
+        [OTRecordCoreDataUtil shareInstance].curRecord.resultTime = [NSString nowTimeTimestamp].intValue;
+        [[OTRecordCoreDataUtil shareInstance] updateCurReocrdComplete:^(BOOL success, NSError * _Nonnull error) {
+            NSLog(@"更新完成");
+        }];
     }
     else if([button.titleLabel.text isEqualToString:@"取消"]) {
-        
     }
 }
-
-#pragma mark GADInterstitialDelegate
-- (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-    
-}
-
 
 #pragma mark- Private Method
 - (void)shareTextToPlatformType:(UMSocialPlatformType)platformType {

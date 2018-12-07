@@ -80,9 +80,10 @@
 #pragma mark- Private methed
 // CoreData数据库存储路径URL
 - (NSURL *)coreDataURL {
-    NSString *dataRootPath = NSHomeDirectory();
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
     NSString *fileName = [NSString stringWithFormat:@"%@.sqlite",self.sqliteName];
-    NSString *dataFullPath = [dataRootPath stringByAppendingPathComponent:fileName];
+    NSString *dataFullPath = [documentsDir stringByAppendingPathComponent:fileName];
     NSURL *URL = [NSURL fileURLWithPath:dataFullPath];
     return URL;
 }

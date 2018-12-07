@@ -28,6 +28,9 @@
 // Custom
 #import "SJCustomAlertController.h"
 
+// Public
+#import "OTRecordModel.h"
+
 // Vendor
 #import "Masonry.h"
 #import <AipOcrSdk/AipOcrSdk.h>
@@ -41,5 +44,11 @@
 // Utils
 #import "SJColorUtil.h"
 #import "SJAdsUtil.h"
+#import "OTRecordCoreDataUtil.h"
+#import "SJFileUtil.h"
+
+
+// Categroy
+#import "NSString+SJCategory.h"
 
 #endif /* OCRTool_pch */

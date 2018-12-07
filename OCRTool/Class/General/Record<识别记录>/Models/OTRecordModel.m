@@ -10,4 +10,13 @@
 
 @implementation OTRecordModel
 
++ (OTRecordModel *)modelWithRecord:(OTRecord *)record {
+    OTRecordModel *model = [[OTRecordModel alloc] init];
+    model.recordID = record.recordID;
+    model.type = record.type;
+    model.resultTxt = record.resultTxt;
+    model.resultTime = record.resultTime;
+    model.imgName = record.imgName;
+    return model;
+}
 @end

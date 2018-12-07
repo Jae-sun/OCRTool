@@ -11,14 +11,18 @@
 
 #import "OTRecognitionAdLoadView.h"
 
-@interface OTRecognitionController () {
+@interface OTRecognitionController ()<GADInterstitialDelegate> {
     // 默认的识别成功的回调
     void (^_successHandler)(id);
     // 默认的识别失败的回调
     void (^_failHandler)(NSError *);
 }
+
 /** 记载页面 */
 @property (nonatomic, strong) OTRecognitionAdLoadView *adLoadView;
+
+/// The interstitial ad.
+@property(nonatomic, strong) GADInterstitial *interstitial;
 
 @end
 
@@ -31,6 +35,13 @@
     self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
          [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
+    
+    self.interstitial = [[GADInterstitial alloc]
+                       initWithAdUnitID:[SJAdsUtil resultInterstitialAdId]];
+    self.interstitial.delegate = self;
+    GADRequest *request = [GADRequest request];
+    [self.interstitial loadRequest:request];
+    
     [self configSubviews];
     [self configCallback];
     switch (self.recognitionType) {
@@ -86,7 +97,6 @@
                                                       withOptions:options
                                                    successHandler:_successHandler
                                                       failHandler:_failHandler];
-        
 }
 
 // 身份证（前）
@@ -120,22 +130,16 @@
                                                     failHandler:_failHandler];
 }
 
-
 #pragma mark- other
 - (void)configCallback {
     SJWeakSelf;
     // 这是默认的识别成功的回调
     _successHandler = ^(id result){
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            OTResultController *VC = [[OTResultController alloc] init];
-            VC.result = result;
-            VC.interstitial = [[GADInterstitial alloc]
-                                 initWithAdUnitID:[SJAdsUtil resultInterstitialAdId]];
-            VC.interstitial.delegate = VC;
-            GADRequest *request = [GADRequest request];
-            [VC.interstitial loadRequest:request];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [weakSelf.navigationController pushViewController:VC animated:YES];
+            OTResultController *resultController = [[OTResultController alloc] init];
+            resultController.result = result;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.navigationController pushViewController:resultController animated:YES];
             });
         }];
     };
@@ -148,6 +152,13 @@
             weakSelf.adLoadView.recognitionFailure = YES;
         }];
     };
+}
+
+#pragma mark GADInterstitialDelegate
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
+    if ([self.interstitial isReady]) {
+        [self.interstitial presentFromRootViewController:self];
+    }
 }
 
 @end

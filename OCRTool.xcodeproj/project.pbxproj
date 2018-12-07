@@ -18,9 +18,15 @@
 		044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669D21B6269E00D681BD /* OTRecognitionController.m */; };
 		044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */; };
 		044B66A521B64A0700D681BD /* 识别中.gif in Resources */ = {isa = PBXBuildFile; fileRef = 044B66A421B64A0600D681BD /* 识别中.gif */; };
-		04A76C8121B77DEB00907020 /* OTRecordCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */; };
 		04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */ = {isa = PBXBuildFile; fileRef = 04A7EA6721B776AD000A74D0 /* ocrtool.md */; };
 		04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */; };
+		04BE51B621BA4A630035294C /* SJFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B521BA4A630035294C /* SJFileUtil.m */; };
+		04BE51BA21BA4F0B0035294C /* NSString+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */; };
+		04BE51C221BA503B0035294C /* OTRecordCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C121BA503B0035294C /* OTRecordCoreDataUtil.m */; };
+		04BE51C521BA50710035294C /* ocr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C321BA50710035294C /* ocr.xcdatamodeld */; };
+		04BE51CA21BA51510035294C /* OTRecord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C721BA51510035294C /* OTRecord+CoreDataClass.m */; };
+		04BE51CB21BA51510035294C /* OTRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C921BA51510035294C /* OTRecord+CoreDataProperties.m */; };
+		04BE51CE21BA573A0035294C /* OTRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51CD21BA573A0035294C /* OTRecordCell.m */; };
 		26575ABA3150EB8EC4AF7915 /* Pods_OCRTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA864CC860A7DF987DCA5A /* Pods_OCRTool.framework */; };
 		3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */; };
 		4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */; };
@@ -130,11 +136,22 @@
 		044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionAdLoadView.h; sourceTree = "<group>"; };
 		044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionAdLoadView.m; sourceTree = "<group>"; };
 		044B66A421B64A0600D681BD /* 识别中.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "识别中.gif"; sourceTree = "<group>"; };
-		04A76C7F21B77DEB00907020 /* OTRecordCoreDataUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordCoreDataUtil.h; sourceTree = "<group>"; };
-		04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordCoreDataUtil.m; sourceTree = "<group>"; };
 		04A7EA6721B776AD000A74D0 /* ocrtool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ocrtool.md; sourceTree = "<group>"; };
 		04A7EA6921B777A8000A74D0 /* OTRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordModel.h; sourceTree = "<group>"; };
 		04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordModel.m; sourceTree = "<group>"; };
+		04BE51B421BA4A630035294C /* SJFileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJFileUtil.h; sourceTree = "<group>"; };
+		04BE51B521BA4A630035294C /* SJFileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFileUtil.m; sourceTree = "<group>"; };
+		04BE51B821BA4F0B0035294C /* NSString+SJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SJCategory.h"; sourceTree = "<group>"; };
+		04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJCategory.m"; sourceTree = "<group>"; };
+		04BE51C021BA503B0035294C /* OTRecordCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRecordCoreDataUtil.h; sourceTree = "<group>"; };
+		04BE51C121BA503B0035294C /* OTRecordCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRecordCoreDataUtil.m; sourceTree = "<group>"; };
+		04BE51C421BA50710035294C /* ocr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ocr.xcdatamodel; sourceTree = "<group>"; };
+		04BE51C621BA51510035294C /* OTRecord+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTRecord+CoreDataClass.h"; sourceTree = "<group>"; };
+		04BE51C721BA51510035294C /* OTRecord+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OTRecord+CoreDataClass.m"; sourceTree = "<group>"; };
+		04BE51C821BA51510035294C /* OTRecord+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04BE51C921BA51510035294C /* OTRecord+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OTRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04BE51CC21BA573A0035294C /* OTRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordCell.h; sourceTree = "<group>"; };
+		04BE51CD21BA573A0035294C /* OTRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordCell.m; sourceTree = "<group>"; };
 		2DAB863507A6E71DB28BDAF6 /* Pods-OCRToolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolTests/Pods-OCRToolTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1916D109A9DA897935B1DB /* Pods-OCRTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool.debug.xcconfig"; sourceTree = "<group>"; };
 		434E01C82F94EDE9F2921B3F /* Pods-OCRToolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRToolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCRToolUITests/Pods-OCRToolUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +335,12 @@
 		044B668321B61BDE00D681BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04BE51C621BA51510035294C /* OTRecord+CoreDataClass.h */,
+				04BE51C721BA51510035294C /* OTRecord+CoreDataClass.m */,
+				04BE51C821BA51510035294C /* OTRecord+CoreDataProperties.h */,
+				04BE51C921BA51510035294C /* OTRecord+CoreDataProperties.m */,
+				04BE51C021BA503B0035294C /* OTRecordCoreDataUtil.h */,
+				04BE51C121BA503B0035294C /* OTRecordCoreDataUtil.m */,
 				044B668421B61BDE00D681BD /* OTRecordAdModel.h */,
 				044B668521B61BDE00D681BD /* OTRecordAdModel.m */,
 				04A7EA6921B777A8000A74D0 /* OTRecordModel.h */,
@@ -331,6 +354,8 @@
 			children = (
 				044B668721B61BDE00D681BD /* OTRecordAdCell.h */,
 				044B668821B61BDE00D681BD /* OTRecordAdCell.m */,
+				04BE51CC21BA573A0035294C /* OTRecordCell.h */,
+				04BE51CD21BA573A0035294C /* OTRecordCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +396,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		04BE51B321BA4A4B0035294C /* SJFileUtil */ = {
+			isa = PBXGroup;
+			children = (
+				04BE51B421BA4A630035294C /* SJFileUtil.h */,
+				04BE51B521BA4A630035294C /* SJFileUtil.m */,
+			);
+			path = SJFileUtil;
+			sourceTree = "<group>";
+		};
+		04BE51B721BA4EEA0035294C /* NSString+SJCategory */ = {
+			isa = PBXGroup;
+			children = (
+				04BE51B821BA4F0B0035294C /* NSString+SJCategory.h */,
+				04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */,
+			);
+			path = "NSString+SJCategory";
+			sourceTree = "<group>";
+		};
+		04BE51BF21BA503B0035294C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04F1720621ACE215005140C7 /* APP */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +431,7 @@
 				4B518C6421869E590069EE8F /* LaunchScreen.storyboard */,
 				4B518C6721869E590069EE8F /* Info.plist */,
 				4B518C6821869E590069EE8F /* main.m */,
+				04BE51C321BA50710035294C /* ocr.xcdatamodeld */,
 			);
 			path = APP;
 			sourceTree = "<group>";
@@ -427,8 +478,6 @@
 			children = (
 				4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */,
 				4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */,
-				04A76C7F21B77DEB00907020 /* OTRecordCoreDataUtil.h */,
-				04A76C8021B77DEB00907020 /* OTRecordCoreDataUtil.m */,
 			);
 			path = SJCoreDataUtil;
 			sourceTree = "<group>";
@@ -620,6 +669,7 @@
 		4B518CBF2186F6050069EE8F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				04BE51B721BA4EEA0035294C /* NSString+SJCategory */,
 				4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */,
 				4B518CC02186F6120069EE8F /* UIColor */,
 			);
@@ -650,6 +700,7 @@
 		4B7A567321913E8C00035EF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04BE51B321BA4A4B0035294C /* SJFileUtil */,
 				044B667521B61A6500D681BD /* SJAdsUtil */,
 				4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */,
 				4B7A567421913E9600035EF2 /* SJColorUtil */,
@@ -696,8 +747,8 @@
 		4BBD016321A2EDC400413B14 /* Result<识别结果> */ = {
 			isa = PBXGroup;
 			children = (
+				04BE51BF21BA503B0035294C /* Models */,
 				4BBD016621A2EE0E00413B14 /* Views */,
-				4BBD016521A2EE0600413B14 /* Models */,
 				4BBD016421A2EDFF00413B14 /* Controllers */,
 			);
 			path = "Result<识别结果>";
@@ -710,13 +761,6 @@
 				4BBD016821A2EE2200413B14 /* OTResultController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		4BBD016521A2EE0600413B14 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		4BBD016621A2EE0E00413B14 /* Views */ = {
@@ -994,30 +1038,35 @@
 			files = (
 				4B9131822187092600580F95 /* SJTableViewCell.m in Sources */,
 				4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */,
+				04BE51C221BA503B0035294C /* OTRecordCoreDataUtil.m in Sources */,
 				4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */,
+				04BE51C521BA50710035294C /* ocr.xcdatamodeld in Sources */,
 				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
 				044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */,
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
 				044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */,
-				04A76C8121B77DEB00907020 /* OTRecordCoreDataUtil.m in Sources */,
 				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
 				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
 				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
 				4B7A56822191566C00035EF2 /* SJModel.m in Sources */,
 				044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */,
+				04BE51CB21BA51510035294C /* OTRecord+CoreDataProperties.m in Sources */,
 				4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */,
 				4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */,
 				4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */,
 				044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */,
 				04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */,
 				4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */,
+				04BE51CA21BA51510035294C /* OTRecord+CoreDataClass.m in Sources */,
 				044B669321B61BDE00D681BD /* OTRecordAdCell.m in Sources */,
 				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,
+				04BE51CE21BA573A0035294C /* OTRecordCell.m in Sources */,
 				4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */,
 				044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */,
 				044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */,
 				4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */,
+				04BE51B621BA4A630035294C /* SJFileUtil.m in Sources */,
 				4BB782B721AD74A600F918F4 /* ZZJBlockBarButtonItem.m in Sources */,
 				4B518C952186BA040069EE8F /* SJViewController.m in Sources */,
 				4B518C6921869E590069EE8F /* main.m in Sources */,
@@ -1028,6 +1077,7 @@
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
 				044B669721B61BDE00D681BD /* OTRecordController.m in Sources */,
+				04BE51BA21BA4F0B0035294C /* NSString+SJCategory.m in Sources */,
 				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1331,6 +1381,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04BE51C321BA50710035294C /* ocr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04BE51C421BA50710035294C /* ocr.xcdatamodel */,
+			);
+			currentVersion = 04BE51C421BA50710035294C /* ocr.xcdatamodel */;
+			path = ocr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4B518C4E21869E590069EE8F /* Project object */;
 }

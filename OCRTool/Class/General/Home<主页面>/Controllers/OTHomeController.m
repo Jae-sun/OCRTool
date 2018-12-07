@@ -25,7 +25,6 @@
 /**  **/
 @property (nonatomic, strong) UIViewController *presentedController;
 
-
 @end
 
 @implementation OTHomeController 
@@ -75,10 +74,10 @@
     else if ([model.title isEqualToString:@"高精度识别"]) {
         [self generalAccurateOCR];
     }
-    else if ([model.title isEqualToString:@"身份证（前）"]) {
+    else if ([model.title isEqualToString:@"身份证(前)"]) {
         [self idcardOCROnlineFront];
     }
-    else if ([model.title isEqualToString:@"身份证（后）"]) {
+    else if ([model.title isEqualToString:@"身份证(后)"]) {
         [self idcardOCROnlineBack];
     }
     else if ([model.title isEqualToString:@"银行卡"]) {
@@ -98,13 +97,17 @@
 - (void)handlerWithImg:(UIImage *)img type:(NSInteger)type {
     SJWeakSelf;
     [self.presentedController dismissViewControllerAnimated:NO completion:^{
-        OTRecognitionController *vc = [[OTRecognitionController alloc] init];
-        vc.image = img;
-        vc.recognitionType = type;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+        [[SJFileUtil shareInstance] saveImage:img complete:^(NSString * _Nonnull imgName) {
+            [OTRecordCoreDataUtil shareInstance].curRecord.imgName = imgName;
+            [OTRecordCoreDataUtil shareInstance].curRecord.type = type;
+            OTRecognitionController *vc = [[OTRecognitionController alloc] init];
+            vc.image = img;
+            vc.recognitionType = type;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+        }];
     }];
-    
 }
+
 // 普通文字识别
 - (void)generalOCR {
     SJWeakSelf;

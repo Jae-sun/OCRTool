@@ -41,7 +41,7 @@
         make.center.equalTo(weakSelf);
         make.size.mas_equalTo(CGSizeMake(kScreenWidth * 0.5, kScreenWidth * 0.5));
     }];
-   
+    
     self.topBannerView = [self bannerViewWithSize:CGSizeMake(80, 300)];
     [self addSubview:self.topBannerView];
     [self.topBannerView mas_makeConstraints:^(MASConstraintMaker *make) {

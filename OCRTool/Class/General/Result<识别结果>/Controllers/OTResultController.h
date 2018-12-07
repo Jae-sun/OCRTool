@@ -13,7 +13,6 @@
 /** 扫描结果 **/
 @property (nonatomic, copy) id result;
 
-/// The interstitial ad.
-@property(nonatomic, strong) GADInterstitial *interstitial;
+@property (nonatomic, strong) OTRecordModel *recordModel;
 
 @end

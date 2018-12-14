@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0400DA7621B6675F00EF56EB /* 识别失败.png in Resources */ = {isa = PBXBuildFile; fileRef = 0400DA7521B6675F00EF56EB /* 识别失败.png */; };
 		044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044B667321B61A3D00D681BD /* bannerAdIds.plist */; };
 		044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667721B61A6500D681BD /* SJAdsUtil.m */; };
 		044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667C21B61A8300D681BD /* SJLaunchADController.m */; };
@@ -117,7 +116,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0400DA7521B6675F00EF56EB /* 识别失败.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "识别失败.png"; sourceTree = "<group>"; };
 		044B667321B61A3D00D681BD /* bannerAdIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bannerAdIds.plist; sourceTree = "<group>"; };
 		044B667621B61A6500D681BD /* SJAdsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAdsUtil.h; sourceTree = "<group>"; };
 		044B667721B61A6500D681BD /* SJAdsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAdsUtil.m; sourceTree = "<group>"; };
@@ -621,7 +619,6 @@
 		4B518CA92186C6AC0069EE8F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				0400DA7521B6675F00EF56EB /* 识别失败.png */,
 				044B66A421B64A0600D681BD /* 识别中.gif */,
 				044B667321B61A3D00D681BD /* bannerAdIds.plist */,
 			);
@@ -924,7 +921,6 @@
 			files = (
 				044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */,
 				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
-				0400DA7621B6675F00EF56EB /* 识别失败.png in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
 				044B66A521B64A0700D681BD /* 识别中.gif in Resources */,
 				04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */,

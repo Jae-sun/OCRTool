@@ -67,6 +67,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [[OTRecordCoreDataUtil shareInstance] clearCurRecord];
+    
     OTHomeMenuModel *model = [self.viewModel modelOfItemWithIndexPath:indexPath];
     if ([model.title isEqualToString:@"文字识别"]) {
         [self generalOCR];

@@ -39,10 +39,6 @@
 
     [self configSubviews];
     [self configDatas];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
     [self refreshAD];
 }
 
@@ -130,6 +126,7 @@
             OTResultController *vc = [[OTResultController alloc] init];
             vc.recordModel = model;
             [self.navigationController pushViewController:vc animated:YES];
+             [self refreshAD];
         });
     }
 }
@@ -170,7 +167,6 @@
     }
     return @[];
 }
-
 
 #pragma mark GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {

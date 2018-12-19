@@ -17,7 +17,6 @@
 		044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669D21B6269E00D681BD /* OTRecognitionController.m */; };
 		044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */; };
 		044B66A521B64A0700D681BD /* 识别中.gif in Resources */ = {isa = PBXBuildFile; fileRef = 044B66A421B64A0600D681BD /* 识别中.gif */; };
-		04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */ = {isa = PBXBuildFile; fileRef = 04A7EA6721B776AD000A74D0 /* ocrtool.md */; };
 		04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */; };
 		04BE51B621BA4A630035294C /* SJFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B521BA4A630035294C /* SJFileUtil.m */; };
 		04BE51BA21BA4F0B0035294C /* NSString+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */; };
@@ -30,6 +29,7 @@
 		3096CEF75725B81166D13AFE /* Pods_OCRToolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085137811A967651EBF49 /* Pods_OCRToolTests.framework */; };
 		4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */; };
 		4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1BCE20219DB19400FC0DA8 /* SJView.m */; };
+		4B1BFF0B21C422A70054EFBA /* 识别失败.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B1BFF0A21C422A70054EFBA /* 识别失败.png */; };
 		4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */; };
 		4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3D21AC2B10008C9DEF /* SJShareAlertView.m */; };
 		4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */; };
@@ -134,7 +134,6 @@
 		044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionAdLoadView.h; sourceTree = "<group>"; };
 		044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionAdLoadView.m; sourceTree = "<group>"; };
 		044B66A421B64A0600D681BD /* 识别中.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "识别中.gif"; sourceTree = "<group>"; };
-		04A7EA6721B776AD000A74D0 /* ocrtool.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ocrtool.md; sourceTree = "<group>"; };
 		04A7EA6921B777A8000A74D0 /* OTRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordModel.h; sourceTree = "<group>"; };
 		04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordModel.m; sourceTree = "<group>"; };
 		04BE51B421BA4A630035294C /* SJFileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJFileUtil.h; sourceTree = "<group>"; };
@@ -158,6 +157,8 @@
 		4B1BCE1D219DB18100FC0DA8 /* OTHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeView.m; sourceTree = "<group>"; };
 		4B1BCE1F219DB19400FC0DA8 /* SJView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJView.h; sourceTree = "<group>"; };
 		4B1BCE20219DB19400FC0DA8 /* SJView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJView.m; sourceTree = "<group>"; };
+		4B1BFF0A21C422A70054EFBA /* 识别失败.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "识别失败.png"; sourceTree = "<group>"; };
+		4B1BFF0C21C4252F0054EFBA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJWebViewController.m; sourceTree = "<group>"; };
 		4B454D3821AC2A6F008C9DEF /* SJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJWebViewController.h; sourceTree = "<group>"; };
 		4B454D3C21AC2B10008C9DEF /* SJShareAlertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJShareAlertCell.h; sourceTree = "<group>"; };
@@ -483,7 +484,6 @@
 		4B518C4D21869E590069EE8F = {
 			isa = PBXGroup;
 			children = (
-				04A7EA6721B776AD000A74D0 /* ocrtool.md */,
 				4B518C5821869E590069EE8F /* OCRTool */,
 				4B518C7121869E590069EE8F /* OCRToolTests */,
 				4B518C7C21869E590069EE8F /* OCRToolUITests */,
@@ -619,6 +619,7 @@
 		4B518CA92186C6AC0069EE8F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4B1BFF0A21C422A70054EFBA /* 识别失败.png */,
 				044B66A421B64A0600D681BD /* 识别中.gif */,
 				044B667321B61A3D00D681BD /* bannerAdIds.plist */,
 			);
@@ -923,7 +924,7 @@
 				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
 				044B66A521B64A0700D681BD /* 识别中.gif in Resources */,
-				04A7EA6821B776AD000A74D0 /* ocrtool.md in Resources */,
+				4B1BFF0B21C422A70054EFBA /* 识别失败.png in Resources */,
 				4B9131832187092600580F95 /* SJTableViewCell.xib in Resources */,
 				4B518C6321869E590069EE8F /* Assets.xcassets in Resources */,
 				4B9131732186FC4200580F95 /* SJCollectionReusableView.xib in Resources */,
@@ -1114,6 +1115,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4B518C6521869E590069EE8F /* Base */,
+				4B1BFF0C21C4252F0054EFBA /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1125,6 +1127,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1169,7 +1172,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1180,6 +1183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1218,7 +1222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1240,6 +1244,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/APP/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1267,6 +1272,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCRTool/APP/OCRTool.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/OCRTool/APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -170,7 +170,6 @@
 
 #pragma mark GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-   
 }
 
 @end

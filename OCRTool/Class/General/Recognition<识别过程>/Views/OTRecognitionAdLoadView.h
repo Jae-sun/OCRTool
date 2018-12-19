@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithController:(UIViewController *)controller;
 
 /** 识别结果 */
-@property (nonatomic, assign) BOOL recognitionFailure;
+@property (nonatomic, copy) NSString *errorMsg;
 
 @end
 

@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) YYAnimatedImageView *loadingView;
 
+@property (nonatomic, strong) UILabel *errorLabel;
+
 @end
 
 @implementation OTRecognitionAdLoadView
@@ -42,45 +44,52 @@
         make.size.mas_equalTo(CGSizeMake(kScreenWidth * 0.5, kScreenWidth * 0.5));
     }];
     
-    self.topBannerView = [self bannerViewWithSize:CGSizeMake(80, 300)];
-    [self addSubview:self.topBannerView];
-    [self.topBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(weakSelf);
-        make.centerY.equalTo(weakSelf);
+    self.errorLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self addSubview:self.errorLabel];
+    [self.errorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.loadingView.mas_bottom).offset(15.f);
+        make.centerX.equalTo(weakSelf.loadingView);
     }];
-    
-    self.bottomBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, 80)];
-    [self addSubview:self.bottomBannerView];
-    [self.bottomBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(weakSelf);
-        make.bottom.equalTo(weakSelf);
-    }];
+    self.errorLabel.textColor = [UIColor redColor];
+//    self.topBannerView = [self bannerViewWithSize:CGSizeMake(80, 300)];
+//    [self addSubview:self.topBannerView];
+//    [self.topBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(weakSelf);
+//        make.centerY.equalTo(weakSelf);
+//    }];
+//
+//    self.bottomBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, 80)];
+//    [self addSubview:self.bottomBannerView];
+//    [self.bottomBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(weakSelf);
+//        make.bottom.equalTo(weakSelf);
+//    }];
 }
-
-- (GADBannerView *)bannerViewWithSize:(CGSize)size {
-    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(size)];
-    bannerView.rootViewController = self.controller;
-    bannerView.delegate = self;
-    bannerView.adUnitID = [SJAdsUtil randomBannerAdId];
-    GADRequest *request = [GADRequest request];
-    [bannerView loadRequest:request];
-    return bannerView;
-}
+//
+//- (GADBannerView *)bannerViewWithSize:(CGSize)size {
+//    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(size)];
+//    bannerView.rootViewController = self.controller;
+//    bannerView.delegate = self;
+//    bannerView.adUnitID = [SJAdsUtil randomBannerAdId];
+//    GADRequest *request = [GADRequest request];
+//    [bannerView loadRequest:request];
+//    return bannerView;
+//}
 
 #pragma mark- GADBannerViewDelegate
-- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-    NSLog(@"succesfully received ad!");
-}
+//- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+//    NSLog(@"succesfully received ad!");
+//}
+//
+//- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
+//    NSLog(@"Failed to receive ad: %@", error.localizedDescription);
+//}
 
-- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"Failed to receive ad: %@", error.localizedDescription);
-}
-
-#pragma mark
-- (void)setRecognitionFailure:(BOOL)recognitionFailure {
-    _recognitionFailure = recognitionFailure;
-    if (recognitionFailure) {
+#pragma mark-
+- (void)setErrorMsg:(NSString *)errorMsg {
+    if (errorMsg) {
         self.loadingView.image = [UIImage imageNamed:@"识别失败.png"];
+        self.errorLabel.text = errorMsg;
     }
 }
 

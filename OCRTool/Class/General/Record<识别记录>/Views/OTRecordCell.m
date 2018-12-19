@@ -74,7 +74,16 @@
         self.imgView.image = [UIImage imageWithContentsOfFile:imgPath];
     });
     self.txtLabel.text = model.resultTxt;
-    self.timeLabel.text = [NSString stringWithFormat:@"%d",model.resultTime];
+    // iOS 生成的时间戳是10位
+    NSTimeInterval interval    = model.resultTime;
+    NSDate *date               = [NSDate dateWithTimeIntervalSince1970:interval];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yy-MM-dd HH:mm"];
+    NSString *dateString = [formatter stringFromDate: date];
+    NSLog(@"服务器返回的时间戳对应的时间是:%@",dateString);
+    self.timeLabel.text = dateString;
 }
+
+
 
 @end

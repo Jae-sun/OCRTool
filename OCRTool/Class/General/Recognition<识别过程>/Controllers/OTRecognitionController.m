@@ -149,7 +149,7 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             NSLog(@"识别失败：%@",msg);
             weakSelf.title = @"识别失败";
-            weakSelf.adLoadView.recognitionFailure = YES;
+            weakSelf.adLoadView.errorMsg = [weakSelf errorMsgWithCode:error.code];
         }];
     };
 }
@@ -160,5 +160,65 @@
         [self.interstitial presentFromRootViewController:self];
     }
 }
+
+- (NSString *)errorMsgWithCode:(NSInteger)code {
+    switch (code) {
+        case 216015:
+            return @"模块关闭";
+            break;
+        case 216100:
+            return @"图片未发现相应内容";
+            break;
+        case 216101:
+            return @"参数数量不够";
+            break;
+        case 216102:
+            return @"业务不支持";
+            break;
+        case 216103:
+            return @"参数太长";
+            break;
+        case 216110:
+            return @"APP ID不存在";
+            break;
+        case 216111:
+            return @"非法用户ID";
+            break;
+        case 216200:
+            return @"空的图片";
+            break;
+        case 216201:
+            return @"图片格式错误";
+            break;
+        case 216202:
+            return @"图片大小错误";
+            break;
+        case 216401:
+            return @"内部错误";
+            break;
+        case 216500:
+            return @"未知错误";
+            break;
+        case 216630:
+            return @"识别错误";
+            break;
+        case 216631:
+            return @"未检测到银行卡";
+            break;
+        case 216633:
+            return @"未检测到身份证";
+            break;
+        case 216634:
+            return @"检测错误";
+            break;
+        case 216632:
+            return @"未知错误";
+        default:
+            break;
+    }
+    return @"识别失败,请稍后再试";
+}
+
+
 
 @end

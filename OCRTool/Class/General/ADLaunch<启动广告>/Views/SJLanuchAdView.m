@@ -45,7 +45,7 @@
     }];
     GADBannerView *bannerView = [[GADBannerView alloc]
                                  initWithAdSize:GADAdSizeFromCGSize(
-                                                                    CGSizeMake(kScreenWidth, kScreenHeight))];
+                                                                    CGSizeMake(kScreenWidth, 80))];
     bannerView.delegate = self;
     self.bannerView = bannerView;
     [self addSubview:self.bannerView];

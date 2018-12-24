@@ -10,12 +10,6 @@
 
 @interface OTRecognitionAdLoadView()<GADBannerViewDelegate>
 
-// 广告视图
-@property (nonatomic, strong) GADBannerView *topBannerView;
-// 广告视图
-@property (nonatomic, strong) GADBannerView *bottomBannerView;
-@property (nonatomic, strong) UIViewController *controller;
-
 @property (nonatomic, strong) YYAnimatedImageView *loadingView;
 
 @property (nonatomic, strong) UILabel *errorLabel;
@@ -25,10 +19,9 @@
 @implementation OTRecognitionAdLoadView
 
 
-- (instancetype)initWithController:(UIViewController *)controller {
+- (instancetype)init {
     if (self = [super init]) {
         self.backgroundColor = [UIColor whiteColor];
-        self.controller = controller;
         // 配置视图
         [self configSubviews];
     }
@@ -36,7 +29,7 @@
 }
 
 - (void)configSubviews {
-     SJWeakSelf;
+    SJWeakSelf;
     self.loadingView = [[YYAnimatedImageView alloc] initWithImage:[YYImage imageNamed:@"识别中.gif"]];
     [self addSubview:self.loadingView];
     [self.loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,39 +44,7 @@
         make.centerX.equalTo(weakSelf.loadingView);
     }];
     self.errorLabel.textColor = [UIColor redColor];
-//    self.topBannerView = [self bannerViewWithSize:CGSizeMake(80, 300)];
-//    [self addSubview:self.topBannerView];
-//    [self.topBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(weakSelf);
-//        make.centerY.equalTo(weakSelf);
-//    }];
-//
-//    self.bottomBannerView = [self bannerViewWithSize:CGSizeMake(kScreenWidth, 80)];
-//    [self addSubview:self.bottomBannerView];
-//    [self.bottomBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.right.equalTo(weakSelf);
-//        make.bottom.equalTo(weakSelf);
-//    }];
 }
-//
-//- (GADBannerView *)bannerViewWithSize:(CGSize)size {
-//    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(size)];
-//    bannerView.rootViewController = self.controller;
-//    bannerView.delegate = self;
-//    bannerView.adUnitID = [SJAdsUtil randomBannerAdId];
-//    GADRequest *request = [GADRequest request];
-//    [bannerView loadRequest:request];
-//    return bannerView;
-//}
-
-#pragma mark- GADBannerViewDelegate
-//- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-//    NSLog(@"succesfully received ad!");
-//}
-//
-//- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
-//    NSLog(@"Failed to receive ad: %@", error.localizedDescription);
-//}
 
 #pragma mark-
 - (void)setErrorMsg:(NSString *)errorMsg {

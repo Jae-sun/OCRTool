@@ -75,7 +75,8 @@
 }
 
 - (void)configSubviews {
-    OTRecognitionAdLoadView *adLoadView = [[OTRecognitionAdLoadView alloc] initWithController:self];
+    OTRecognitionAdLoadView *adLoadView = [[OTRecognitionAdLoadView alloc] init];
+    adLoadView.adController = self;
     [self.view addSubview:adLoadView];
     SJWeakSelf;
     [adLoadView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -156,7 +157,7 @@
 
 #pragma mark GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-    if ([self.interstitial isReady]) {
+    if ([self.interstitial isReady] && self.recognitionType != 0) {
         [self.interstitial presentFromRootViewController:self];
     }
 }

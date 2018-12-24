@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043576D921D0879600B0BA7C /* SJADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043576D821D0879600B0BA7C /* SJADView.m */; };
 		044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044B667321B61A3D00D681BD /* bannerAdIds.plist */; };
 		044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667721B61A6500D681BD /* SJAdsUtil.m */; };
 		044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667C21B61A8300D681BD /* SJLaunchADController.m */; };
@@ -17,9 +18,13 @@
 		044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B669D21B6269E00D681BD /* OTRecognitionController.m */; };
 		044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */; };
 		044B66A521B64A0700D681BD /* 识别中.gif in Resources */ = {isa = PBXBuildFile; fileRef = 044B66A421B64A0600D681BD /* 识别中.gif */; };
+		046237C521D077BF00BEA3AC /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237BF21D077BE00BEA3AC /* UIColor+Expanded.m */; };
+		046237C621D077BF00BEA3AC /* UIColor+HSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237C121D077BE00BEA3AC /* UIColor+HSV.m */; };
+		046237C721D077BF00BEA3AC /* NSString+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237C421D077BE00BEA3AC /* NSString+SJCategory.m */; };
+		046237CB21D077D900BEA3AC /* UIImage+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237C921D077D900BEA3AC /* UIImage+SJCategory.m */; };
+		046237CF21D0816300BEA3AC /* HYKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237CE21D0816300BEA3AC /* HYKeychain.m */; };
 		04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */; };
 		04BE51B621BA4A630035294C /* SJFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B521BA4A630035294C /* SJFileUtil.m */; };
-		04BE51BA21BA4F0B0035294C /* NSString+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */; };
 		04BE51C221BA503B0035294C /* OTRecordCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C121BA503B0035294C /* OTRecordCoreDataUtil.m */; };
 		04BE51C521BA50710035294C /* ocr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C321BA50710035294C /* ocr.xcdatamodeld */; };
 		04BE51CA21BA51510035294C /* OTRecord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51C721BA51510035294C /* OTRecord+CoreDataClass.m */; };
@@ -35,7 +40,6 @@
 		4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D3E21AC2B10008C9DEF /* SJShareAlertCell.m */; };
 		4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D4C21AC2B95008C9DEF /* SJCustomAlertController.m */; };
 		4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */; };
-		4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */; };
 		4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */; };
 		4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518C5A21869E590069EE8F /* AppDelegate.m */; };
 		4B518C6321869E590069EE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B518C6221869E590069EE8F /* Assets.xcassets */; };
@@ -49,8 +53,6 @@
 		4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CAE2186C8840069EE8F /* SJCollectionViewCell.m */; };
 		4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B518CAF2186C8840069EE8F /* SJCollectionViewCell.xib */; };
 		4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */; };
-		4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CB92186F5E30069EE8F /* UIColor+HSV.m */; };
-		4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */; };
 		4B6A539A21B8185D00715454 /* SJInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A539921B8185D00715454 /* SJInputToolBar.m */; };
 		4B7A566C21913A3700035EF2 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; };
 		4B7A566D21913A3700035EF2 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7A5666219138B700035EF2 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,6 +118,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		043576D721D0879600B0BA7C /* SJADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJADView.h; sourceTree = "<group>"; };
+		043576D821D0879600B0BA7C /* SJADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJADView.m; sourceTree = "<group>"; };
 		044B667321B61A3D00D681BD /* bannerAdIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bannerAdIds.plist; sourceTree = "<group>"; };
 		044B667621B61A6500D681BD /* SJAdsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAdsUtil.h; sourceTree = "<group>"; };
 		044B667721B61A6500D681BD /* SJAdsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAdsUtil.m; sourceTree = "<group>"; };
@@ -134,12 +138,20 @@
 		044B66A121B629D900D681BD /* OTRecognitionAdLoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecognitionAdLoadView.h; sourceTree = "<group>"; };
 		044B66A221B629D900D681BD /* OTRecognitionAdLoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecognitionAdLoadView.m; sourceTree = "<group>"; };
 		044B66A421B64A0600D681BD /* 识别中.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "识别中.gif"; sourceTree = "<group>"; };
+		046237BE21D077BE00BEA3AC /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		046237BF21D077BE00BEA3AC /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		046237C021D077BE00BEA3AC /* UIColor+HSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSV.h"; sourceTree = "<group>"; };
+		046237C121D077BE00BEA3AC /* UIColor+HSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSV.m"; sourceTree = "<group>"; };
+		046237C321D077BE00BEA3AC /* NSString+SJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SJCategory.h"; sourceTree = "<group>"; };
+		046237C421D077BE00BEA3AC /* NSString+SJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJCategory.m"; sourceTree = "<group>"; };
+		046237C921D077D900BEA3AC /* UIImage+SJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SJCategory.m"; sourceTree = "<group>"; };
+		046237CA21D077D900BEA3AC /* UIImage+SJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SJCategory.h"; sourceTree = "<group>"; };
+		046237CD21D0816300BEA3AC /* HYKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYKeychain.h; sourceTree = "<group>"; };
+		046237CE21D0816300BEA3AC /* HYKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYKeychain.m; sourceTree = "<group>"; };
 		04A7EA6921B777A8000A74D0 /* OTRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordModel.h; sourceTree = "<group>"; };
 		04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTRecordModel.m; sourceTree = "<group>"; };
 		04BE51B421BA4A630035294C /* SJFileUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJFileUtil.h; sourceTree = "<group>"; };
 		04BE51B521BA4A630035294C /* SJFileUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFileUtil.m; sourceTree = "<group>"; };
-		04BE51B821BA4F0B0035294C /* NSString+SJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SJCategory.h"; sourceTree = "<group>"; };
-		04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJCategory.m"; sourceTree = "<group>"; };
 		04BE51C021BA503B0035294C /* OTRecordCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRecordCoreDataUtil.h; sourceTree = "<group>"; };
 		04BE51C121BA503B0035294C /* OTRecordCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRecordCoreDataUtil.m; sourceTree = "<group>"; };
 		04BE51C421BA50710035294C /* ocr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ocr.xcdatamodel; sourceTree = "<group>"; };
@@ -169,8 +181,6 @@
 		4B454D4D21AC2B95008C9DEF /* SJPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJPresentationController.h; sourceTree = "<group>"; };
 		4B454D4E21AC2B95008C9DEF /* SJCustomAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCustomAlertController.h; sourceTree = "<group>"; };
 		4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJPresentationController.m; sourceTree = "<group>"; };
-		4B454D5821AC2D27008C9DEF /* UIImage+SJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+SJCategory.h"; path = "OCRTool/Class/Category/UIImage+SJCategroy/UIImage+SJCategory.h"; sourceTree = SOURCE_ROOT; };
-		4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SJCategory.m"; path = "OCRTool/Class/Category/UIImage+SJCategroy/UIImage+SJCategory.m"; sourceTree = SOURCE_ROOT; };
 		4B454D5C21AC3D51008C9DEF /* SJCoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCoreDataUtil.m; sourceTree = "<group>"; };
 		4B454D5D21AC3D51008C9DEF /* SJCoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCoreDataUtil.h; sourceTree = "<group>"; };
 		4B518C5621869E590069EE8F /* OCRTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,10 +209,6 @@
 		4B518CAF2186C8840069EE8F /* SJCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SJCollectionViewCell.xib; sourceTree = "<group>"; };
 		4B518CB22186C8BD0069EE8F /* OTHomeCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTHomeCollectionCell.h; sourceTree = "<group>"; };
 		4B518CB32186C8BD0069EE8F /* OTHomeCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTHomeCollectionCell.m; sourceTree = "<group>"; };
-		4B518CB92186F5E30069EE8F /* UIColor+HSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSV.m"; sourceTree = "<group>"; };
-		4B518CBA2186F5E30069EE8F /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
-		4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
-		4B518CBC2186F5E30069EE8F /* UIColor+HSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSV.h"; sourceTree = "<group>"; };
 		4B6A539821B8185D00715454 /* SJInputToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJInputToolBar.h; sourceTree = "<group>"; };
 		4B6A539921B8185D00715454 /* SJInputToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJInputToolBar.m; sourceTree = "<group>"; };
 		4B7A5666219138B700035EF2 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
@@ -395,6 +401,44 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		046237BD21D077BE00BEA3AC /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				046237BE21D077BE00BEA3AC /* UIColor+Expanded.h */,
+				046237BF21D077BE00BEA3AC /* UIColor+Expanded.m */,
+				046237C021D077BE00BEA3AC /* UIColor+HSV.h */,
+				046237C121D077BE00BEA3AC /* UIColor+HSV.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		046237C221D077BE00BEA3AC /* NSString+SJCategory */ = {
+			isa = PBXGroup;
+			children = (
+				046237C321D077BE00BEA3AC /* NSString+SJCategory.h */,
+				046237C421D077BE00BEA3AC /* NSString+SJCategory.m */,
+			);
+			path = "NSString+SJCategory";
+			sourceTree = "<group>";
+		};
+		046237C821D077CB00BEA3AC /* UIImage+SJCategory */ = {
+			isa = PBXGroup;
+			children = (
+				046237CA21D077D900BEA3AC /* UIImage+SJCategory.h */,
+				046237C921D077D900BEA3AC /* UIImage+SJCategory.m */,
+			);
+			path = "UIImage+SJCategory";
+			sourceTree = "<group>";
+		};
+		046237CC21D0816300BEA3AC /* HYKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				046237CD21D0816300BEA3AC /* HYKeychain.h */,
+				046237CE21D0816300BEA3AC /* HYKeychain.m */,
+			);
+			path = HYKeychain;
+			sourceTree = "<group>";
+		};
 		04BE51B321BA4A4B0035294C /* SJFileUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,15 +446,6 @@
 				04BE51B521BA4A630035294C /* SJFileUtil.m */,
 			);
 			path = SJFileUtil;
-			sourceTree = "<group>";
-		};
-		04BE51B721BA4EEA0035294C /* NSString+SJCategory */ = {
-			isa = PBXGroup;
-			children = (
-				04BE51B821BA4F0B0035294C /* NSString+SJCategory.h */,
-				04BE51B921BA4F0B0035294C /* NSString+SJCategory.m */,
-			);
-			path = "NSString+SJCategory";
 			sourceTree = "<group>";
 		};
 		04BE51BF21BA503B0035294C /* Models */ = {
@@ -460,16 +495,6 @@
 				4B454D4F21AC2B95008C9DEF /* SJPresentationController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */ = {
-			isa = PBXGroup;
-			children = (
-				4B454D5821AC2D27008C9DEF /* UIImage+SJCategory.h */,
-				4B454D5921AC2D27008C9DEF /* UIImage+SJCategory.m */,
-			);
-			name = "UIImage+SJCategroy";
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */ = {
@@ -651,6 +676,8 @@
 				4B9131812187092600580F95 /* SJTableViewCell.xib */,
 				4B1BCE1F219DB19400FC0DA8 /* SJView.h */,
 				4B1BCE20219DB19400FC0DA8 /* SJView.m */,
+				043576D721D0879600B0BA7C /* SJADView.h */,
+				043576D821D0879600B0BA7C /* SJADView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -667,22 +694,11 @@
 		4B518CBF2186F6050069EE8F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				04BE51B721BA4EEA0035294C /* NSString+SJCategory */,
-				4B454D5721AC2D01008C9DEF /* UIImage+SJCategroy */,
-				4B518CC02186F6120069EE8F /* UIColor */,
+				046237C821D077CB00BEA3AC /* UIImage+SJCategory */,
+				046237C221D077BE00BEA3AC /* NSString+SJCategory */,
+				046237BD21D077BE00BEA3AC /* UIColor */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		4B518CC02186F6120069EE8F /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				4B518CBA2186F5E30069EE8F /* UIColor+Expanded.h */,
-				4B518CBB2186F5E30069EE8F /* UIColor+Expanded.m */,
-				4B518CBC2186F5E30069EE8F /* UIColor+HSV.h */,
-				4B518CB92186F5E30069EE8F /* UIColor+HSV.m */,
-			);
-			path = UIColor;
 			sourceTree = "<group>";
 		};
 		4B7A56652191389600035EF2 /* BDAipOCR */ = {
@@ -698,6 +714,7 @@
 		4B7A567321913E8C00035EF2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				046237CC21D0816300BEA3AC /* HYKeychain */,
 				04BE51B321BA4A4B0035294C /* SJFileUtil */,
 				044B667521B61A6500D681BD /* SJAdsUtil */,
 				4B454D5B21AC3D31008C9DEF /* SJCoreDataUtil */,
@@ -1036,30 +1053,32 @@
 				4B9131822187092600580F95 /* SJTableViewCell.m in Sources */,
 				4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */,
 				04BE51C221BA503B0035294C /* OTRecordCoreDataUtil.m in Sources */,
-				4B454D5A21AC2D28008C9DEF /* UIImage+SJCategory.m in Sources */,
+				046237CB21D077D900BEA3AC /* UIImage+SJCategory.m in Sources */,
 				04BE51C521BA50710035294C /* ocr.xcdatamodeld in Sources */,
 				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
 				044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */,
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
+				046237CF21D0816300BEA3AC /* HYKeychain.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
 				044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */,
 				4B7A567921914D2F00035EF2 /* OTHomeViewModel.m in Sources */,
 				4B1BCE1E219DB18100FC0DA8 /* OTHomeView.m in Sources */,
-				4B518CBD2186F5E40069EE8F /* UIColor+HSV.m in Sources */,
 				4B7A56822191566C00035EF2 /* SJModel.m in Sources */,
 				044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */,
 				04BE51CB21BA51510035294C /* OTRecord+CoreDataProperties.m in Sources */,
+				046237C521D077BF00BEA3AC /* UIColor+Expanded.m in Sources */,
 				4B454D5121AC2B96008C9DEF /* SJPresentationController.m in Sources */,
 				4B454D4021AC2B10008C9DEF /* SJShareAlertView.m in Sources */,
 				4B454D4121AC2B10008C9DEF /* SJShareAlertCell.m in Sources */,
 				044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */,
 				04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */,
+				043576D921D0879600B0BA7C /* SJADView.m in Sources */,
 				4B518CB42186C8BD0069EE8F /* OTHomeCollectionCell.m in Sources */,
 				04BE51CA21BA51510035294C /* OTRecord+CoreDataClass.m in Sources */,
+				046237C721D077BF00BEA3AC /* NSString+SJCategory.m in Sources */,
 				044B669321B61BDE00D681BD /* OTRecordAdCell.m in Sources */,
 				4B9131722186FC4200580F95 /* SJCollectionReusableView.m in Sources */,
 				04BE51CE21BA573A0035294C /* OTRecordCell.m in Sources */,
-				4B518CBE2186F5E40069EE8F /* UIColor+Expanded.m in Sources */,
 				044B669E21B6269E00D681BD /* OTRecognitionController.m in Sources */,
 				044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */,
 				4B518C9021869EDA0069EE8F /* OTHomeController.m in Sources */,
@@ -1068,13 +1087,13 @@
 				4B518C952186BA040069EE8F /* SJViewController.m in Sources */,
 				4B518C6921869E590069EE8F /* main.m in Sources */,
 				4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */,
+				046237C621D077BF00BEA3AC /* UIColor+HSV.m in Sources */,
 				4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */,
 				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
 				4B6A539A21B8185D00715454 /* SJInputToolBar.m in Sources */,
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
 				044B669721B61BDE00D681BD /* OTRecordController.m in Sources */,
-				04BE51BA21BA4F0B0035294C /* NSString+SJCategory.m in Sources */,
 				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

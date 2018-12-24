@@ -6,14 +6,11 @@
 //  Copyright © 2018年 Jaesun. All rights reserved.
 //
 
-#import "SJView.h"
+#import "SJADView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OTRecognitionAdLoadView : SJView
-
-- (instancetype)initWithController:(UIViewController *)controller;
-
+@interface OTRecognitionAdLoadView : SJADView
 /** 识别结果 */
 @property (nonatomic, copy) NSString *errorMsg;
 

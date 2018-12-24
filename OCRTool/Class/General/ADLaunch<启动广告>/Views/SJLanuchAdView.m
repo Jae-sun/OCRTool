@@ -45,7 +45,7 @@
     }];
     GADBannerView *bannerView = [[GADBannerView alloc]
                                  initWithAdSize:GADAdSizeFromCGSize(
-                                                                    CGSizeMake(kScreenWidth, 80))];
+                                                                    CGSizeMake(kScreenWidth, kScreenHeight))];
     bannerView.delegate = self;
     self.bannerView = bannerView;
     [self addSubview:self.bannerView];
@@ -75,7 +75,7 @@
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     self.cutdownButton.hidden = NO;
     self.bannerView.hidden = NO;
-    self.cutdownButton.enabled = NO;
+//    self.cutdownButton.enabled = NO;
 }
 
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
@@ -97,9 +97,9 @@
     if(self.leftSeconds == 0){
         [self.timer invalidate];
         if (self.delegate && [self.delegate respondsToSelector:@selector(finshedInLanuchAdView:)]) {
-//            [self.delegate finshedInLanuchAdView:self];
+            [self.delegate finshedInLanuchAdView:self];
             [self.cutdownButton setTitle:@"跳过" forState:UIControlStateNormal];
-            self.cutdownButton.enabled = YES;
+//            self.cutdownButton.enabled = YES;
         }
     }
 }

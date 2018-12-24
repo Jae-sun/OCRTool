@@ -17,6 +17,8 @@
 // statusBar Height
 #define kStatusBarHeight ((CGRect)[[UIApplication sharedApplication] statusBarFrame]).size.height
 
+#define KEY_UDID_INSTEAD @"com.jaesun.ocr.101110001"
+
 // weakSelf
 #define SJWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -46,7 +48,7 @@
 #import "SJAdsUtil.h"
 #import "OTRecordCoreDataUtil.h"
 #import "SJFileUtil.h"
-
+#import "HYKeychain.h"
 
 // Categroy
 #import "NSString+SJCategory.h"

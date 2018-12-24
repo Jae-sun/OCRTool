@@ -50,6 +50,7 @@
     [self.view addSubview:self.homeView];
     self.homeView.delegate = self;
     self.homeView.dataSource = self;
+    self.homeView.adController = self;
     [self.homeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];

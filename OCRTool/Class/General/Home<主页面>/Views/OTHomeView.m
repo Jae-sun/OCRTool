@@ -35,7 +35,7 @@
 }
 
 - (void)configSubviews {
-   
+//    [super configSubviews];
     self.backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_back.jpg"]];
     self.backImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.backImageView];
@@ -60,8 +60,7 @@
     [self.collectonView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self).insets(UIEdgeInsetsMake(top, left, top, left));
     }];
-    
-     [self configSettingButton];
+    [self configSettingButton];
 }
 
 - (void)configSettingButton {
@@ -82,11 +81,9 @@
 }
 
 #pragma mark- Action
-- (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer
-{
-    //移动状态
+- (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer {
+    // 移动状态
     UIGestureRecognizerState recState =  recognizer.state;
-    
     switch (recState) {
         case UIGestureRecognizerStateBegan:
             break;

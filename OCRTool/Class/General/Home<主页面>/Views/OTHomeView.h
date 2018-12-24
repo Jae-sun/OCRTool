@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Jaesun. All rights reserved.
 //
 
-#import "SJView.h"
+#import "SJADView.h"
 
 @protocol OTHomeViewDelegate <UICollectionViewDelegate>
 
@@ -14,7 +14,7 @@
 
 @end
 
-@interface OTHomeView : SJView
+@interface OTHomeView : SJADView
 
 @property (nonatomic, weak) id<OTHomeViewDelegate> delegate;
 @property (nonatomic, weak) id<UICollectionViewDataSource> dataSource;

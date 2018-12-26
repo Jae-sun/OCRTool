@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0433D1CF21D37C510053A968 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0433D1CE21D37C510053A968 /* readme.md */; };
 		043576D921D0879600B0BA7C /* SJADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043576D821D0879600B0BA7C /* SJADView.m */; };
 		044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044B667321B61A3D00D681BD /* bannerAdIds.plist */; };
 		044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667721B61A6500D681BD /* SJAdsUtil.m */; };
@@ -118,6 +119,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0433D1CE21D37C510053A968 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		043576D721D0879600B0BA7C /* SJADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJADView.h; sourceTree = "<group>"; };
 		043576D821D0879600B0BA7C /* SJADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJADView.m; sourceTree = "<group>"; };
 		044B667321B61A3D00D681BD /* bannerAdIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bannerAdIds.plist; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		04F1720621ACE215005140C7 /* APP */ = {
 			isa = PBXGroup;
 			children = (
+				0433D1CE21D37C510053A968 /* readme.md */,
 				4B518CAA2186C6C10069EE8F /* OCRTool.pch */,
 				4B518C5921869E590069EE8F /* AppDelegate.h */,
 				4B518C5A21869E590069EE8F /* AppDelegate.m */,
@@ -938,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */,
+				0433D1CF21D37C510053A968 /* readme.md in Resources */,
 				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
 				044B66A521B64A0700D681BD /* 识别中.gif in Resources */,

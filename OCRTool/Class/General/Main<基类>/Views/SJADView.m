@@ -20,7 +20,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        [self configSubviews];
+        [self addADview];
     }
     return self;
 }
@@ -28,12 +28,12 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // 配置视图
-        [self configSubviews];
+        [self addADview];
     }
     return self;
 }
 
-- (void)configSubviews {
+- (void)addADview {
     self.adView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(CGSizeMake(kScreenWidth, kScreenHeight))];
     [self addSubview:self.adView];
     SJWeakSelf;
@@ -53,7 +53,7 @@
     _adController = adController;
     self.adView.rootViewController = adController;
     self.adView.delegate = self;
-    self.adView.adUnitID = [SJAdsUtil randomBannerAdId];
+    self.adView.adUnitID = [SJAdsUtil lanuchAdId];
     GADRequest *request = [GADRequest request];
     [self.adView loadRequest:request];
 }

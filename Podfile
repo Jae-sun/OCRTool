@@ -22,6 +22,9 @@ target 'OCRTool' do
   pod 'YYKit'
   pod 'MBProgressHUD', '~> 1.1.0'
   
+  pod 'ReactiveObjC' # 函数式编程
+  pod 'YTKNetwork'   # 猿题库网络封装框架
+  
   target 'OCRToolTests' do
     inherit! :search_paths
     # Pods for testing

@@ -10,8 +10,6 @@
 
 @protocol OTHomeViewDelegate <UICollectionViewDelegate>
 
-- (void)homeView:(UIView *)view clickedButton:(UIButton *)button;
-
 @end
 
 @interface OTHomeView : SJADView

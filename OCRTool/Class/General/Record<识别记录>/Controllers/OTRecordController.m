@@ -39,15 +39,6 @@
 
     [self configSubviews];
     [self configDatas];
-    [self refreshAD];
-}
-
-- (void)refreshAD {
-    self.interstitial = [[GADInterstitial alloc]
-                         initWithAdUnitID:[SJAdsUtil resultInterstitialAdId]];
-    self.interstitial.delegate = self;
-    GADRequest *request = [GADRequest request];
-    [self.interstitial loadRequest:request];
 }
 
 - (void)configSubviews {
@@ -62,7 +53,6 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[OTRecordAdCell class] forCellReuseIdentifier:@"OTRecordAdCell"];
     [self.tableView registerClass:[OTRecordCell class] forCellReuseIdentifier:@"OTRecordCell"];
-    
 }
 
 - (void)configDatas {
@@ -119,15 +109,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
      OTRecordModel *model = self.datas[indexPath.row];
     if (model.recordID) {
-        if ([self.interstitial isReady]) {
-            [self.interstitial presentFromRootViewController:self];
-        }
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            OTResultController *vc = [[OTResultController alloc] init];
-            vc.recordModel = model;
-            [self.navigationController pushViewController:vc animated:YES];
-             [self refreshAD];
-        });
+        OTResultController *vc = [[OTResultController alloc] init];
+        vc.recordModel = model;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

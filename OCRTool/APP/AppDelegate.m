@@ -17,15 +17,17 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-     [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self updateRootController:NO];
-
-    [UMConfigure setLogEnabled:NO];//设置打开日志
-    [UMConfigure initWithAppkey:@"5bfbfc6ff1f55629480003bc" channel:@"App Store"];
-    [self configUSharePlatforms];
     
-    [[AipOcrService shardService] authWithAK:@"oehGlhGqfVbccSPhh5i4UpCk" andSK:@"yhQTeknEMRaet9yzXr8RBUbvAoK3HfTn"];
+    // 谷歌广告设置
+    [self ot_googleAdConfig];
+    // 友盟分享设置
+    [self ot_umengShareConfig];
+    // 百度OCR设置
+    [self ot_bdOCRConfig];
+    // 跟视图设置
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self updateRootControllerWithLaunchedAd:NO];
+    
     return YES;
 }
 
@@ -62,8 +64,8 @@
 /**
  更新根控制器
  */
-- (void)updateRootController:(BOOL)showed {
-    if (showed) {
+- (void)updateRootControllerWithLaunchedAd:(BOOL)LaunchedAd {
+    if (LaunchedAd) {
         OTHomeController *homeVC = [[OTHomeController alloc] init];
         UINavigationController *rootNavC = [[UINavigationController alloc] initWithRootViewController:homeVC];
         self.window.rootViewController = rootNavC;
@@ -77,6 +79,19 @@
 }
 
 #pragma mark- Private
+// 百度OCR设置
+- (void)ot_bdOCRConfig {
+    [[AipOcrService shardService] authWithAK:@"oehGlhGqfVbccSPhh5i4UpCk" andSK:@"yhQTeknEMRaet9yzXr8RBUbvAoK3HfTn"];
+}
+
+// 友盟分享设置
+- (void)ot_umengShareConfig {
+    [UMConfigure setLogEnabled:NO]; // 设置打开日志
+    [UMConfigure initWithAppkey:@"5bfbfc6ff1f55629480003bc" channel:@"App Store"];
+    [self configUSharePlatforms];
+}
+
+// 分享平台设置
 - (void)configUSharePlatforms {
     /* 设置微信的appKey和appSecret */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx995b53fcb58cbb7c" appSecret:@"86529793b01c1078756d870008e807f6" redirectURL:@"https://jaesun.oschina.io/"];
@@ -85,5 +100,11 @@
      */
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"101523189"/*设置QQ平台的appID*/  appSecret:nil redirectURL:@"https://jaesun.oschina.io/"];
 }
+
+
+- (void)ot_googleAdConfig {
+     [GADMobileAds configureWithApplicationID:@"ca-app-pub-6278538217166206~9760137507"];
+}
+
 
 @end

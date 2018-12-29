@@ -48,8 +48,8 @@
 - (void)configSubviews {
     self.homeView = [[OTHomeView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.homeView];
-    self.homeView.delegate = self;
     self.homeView.dataSource = self;
+    self.homeView.delegate = self;
     self.homeView.adController = self;
     [self.homeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -69,13 +69,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [[OTRecordCoreDataUtil shareInstance] clearCurRecord];
-    
     OTHomeMenuModel *model = [self.viewModel modelOfItemWithIndexPath:indexPath];
     if ([model.title isEqualToString:@"文字识别"]) {
         [self generalOCR];
     }
-    else if ([model.title isEqualToString:@"高精度识别"]) {
-        [self generalAccurateOCR];
+    else if ([model.title isEqualToString:@"历史记录"]) {
+        OTRecordController *vc = [[OTRecordController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if ([model.title isEqualToString:@"身份证(前)"]) {
         [self idcardOCROnlineFront];
@@ -91,10 +91,6 @@
     }
 }
 
-- (void)homeView:(UIView *)view clickedButton:(UIButton *)button {
-    OTRecordController *vc = [[OTRecordController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 #pragma mark - Action
 - (void)handlerWithImg:(UIImage *)img type:(NSInteger)type {

@@ -15,7 +15,7 @@
 /**
  更新根控制器
  */
-- (void)updateRootController:(BOOL)showed;
+- (void)updateRootControllerWithLaunchedAd:(BOOL)LaunchedAd;
 
 @end
 

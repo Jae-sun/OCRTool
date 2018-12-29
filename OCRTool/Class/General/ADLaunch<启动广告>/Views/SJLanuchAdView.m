@@ -44,8 +44,7 @@
         make.centerY.equalTo(weakSelf);
     }];
     GADBannerView *bannerView = [[GADBannerView alloc]
-                                 initWithAdSize:GADAdSizeFromCGSize(
-                                                                    CGSizeMake(kScreenWidth, kScreenHeight))];
+                                 initWithAdSize:GADAdSizeFromCGSize(CGSizeMake(kScreenWidth, kScreenHeight))];
     bannerView.delegate = self;
     self.bannerView = bannerView;
     [self addSubview:self.bannerView];
@@ -114,7 +113,7 @@
 - (void)setController:(SJLaunchADController *)controller {
     _controller = controller;
     self.bannerView.rootViewController = controller;
-    self.bannerView.adUnitID = @"ca-app-pub-6278538217166206/8657080456";
+    self.bannerView.adUnitID = [SJAdsUtil lanuchAdId];
     GADRequest *request = [GADRequest request];
     [self.bannerView loadRequest:request];
 }

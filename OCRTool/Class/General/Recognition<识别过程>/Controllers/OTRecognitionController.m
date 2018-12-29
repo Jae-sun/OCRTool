@@ -7,7 +7,7 @@
 //
 
 #import "OTRecognitionController.h"
-#import "OTResultController.h"// 识别结果
+#import "OTResultController.h" // 识别结果
 
 #import "OTRecognitionAdLoadView.h"
 

@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     SJLanuchAdView *adView = [[SJLanuchAdView alloc] initWithFrame:CGRectZero];
     adView.delegate = self;
     adView.controller = self;
@@ -30,18 +31,17 @@
     [adView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view);
     }];
+    
     self.adView = adView;
 }
 
 #pragma mark - SJLanuchAdViewDelegate
 - (void)lanuchAdView:(UIView *)view clickedLanuchAdViewButton:(UIButton *)button {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [appDelegate updateRootController:YES];
+    [OTAPP updateRootControllerWithLaunchedAd:YES];
 }
 
 - (void)finshedInLanuchAdView:(UIView *)view {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [appDelegate updateRootController:YES];
+    [OTAPP updateRootControllerWithLaunchedAd:YES];
 }
 
 @end

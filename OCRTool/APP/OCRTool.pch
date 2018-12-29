@@ -10,6 +10,7 @@
 #define OCRTool_pch
 
 // App
+#define OTAPP (AppDelegate *)[UIApplication sharedApplication].delegate
 #define SJScreenWidth [UIScreen mainScreen].bounds.size.width
 #define SJScreenHeight [UIScreen mainScreen].bounds.size.height
 //获取导航栏+状态栏的高度

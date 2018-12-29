@@ -9,6 +9,7 @@
 #import "HYKeychain.h"
 
 @implementation HYKeychain
+
 + (NSString *)getDeviceIDInKeychain {
     NSString *getUDIDInKeychain = (NSString *)[HYKeychain load:KEY_UDID_INSTEAD];
     NSLog(@"从keychain中获取到的 UDID_INSTEAD %@",getUDIDInKeychain);

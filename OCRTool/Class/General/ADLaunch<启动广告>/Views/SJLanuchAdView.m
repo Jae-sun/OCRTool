@@ -88,6 +88,7 @@
 - (void)cutdownButtonAction:(UIButton *)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(lanuchAdView:clickedLanuchAdViewButton:)]) {
         [self.delegate lanuchAdView:self clickedLanuchAdViewButton:sender];
+         [self.timer invalidate];
     }
 }
 

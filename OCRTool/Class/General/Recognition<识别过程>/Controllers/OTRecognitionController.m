@@ -31,10 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"识别中...";
-    SJWeakSelf;
-    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
-         [weakSelf.navigationController popViewControllerAnimated:YES];
-    }];
+//    SJWeakSelf;
+//    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
+//         [weakSelf.navigationController popViewControllerAnimated:YES];
+//    }];
     
     self.interstitial = [[GADInterstitial alloc]
                        initWithAdUnitID:[SJAdsUtil resultInterstitialAdId]];

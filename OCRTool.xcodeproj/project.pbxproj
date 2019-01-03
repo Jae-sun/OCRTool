@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0433D1CF21D37C510053A968 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0433D1CE21D37C510053A968 /* readme.md */; };
 		043576D921D0879600B0BA7C /* SJADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043576D821D0879600B0BA7C /* SJADView.m */; };
-		044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044B667321B61A3D00D681BD /* bannerAdIds.plist */; };
 		044B667821B61A6600D681BD /* SJAdsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667721B61A6500D681BD /* SJAdsUtil.m */; };
 		044B668021B61A8300D681BD /* SJLaunchADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667C21B61A8300D681BD /* SJLaunchADController.m */; };
 		044B668121B61A8300D681BD /* SJLanuchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B667F21B61A8300D681BD /* SJLanuchAdView.m */; };
@@ -24,6 +23,10 @@
 		046237C721D077BF00BEA3AC /* NSString+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237C421D077BE00BEA3AC /* NSString+SJCategory.m */; };
 		046237CB21D077D900BEA3AC /* UIImage+SJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237C921D077D900BEA3AC /* UIImage+SJCategory.m */; };
 		046237CF21D0816300BEA3AC /* HYKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 046237CE21D0816300BEA3AC /* HYKeychain.m */; };
+		047C95E721DDA0C40052F6E0 /* SJCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C95E321DDA0C40052F6E0 /* SJCameraController.m */; };
+		047C95ED21DDA4C60052F6E0 /* OCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C95EA21DDA4C50052F6E0 /* OCNavigationController.m */; };
+		047C95EE21DDA4C60052F6E0 /* OCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C95EC21DDA4C50052F6E0 /* OCTabBarController.m */; };
+		047C95F121DDBD350052F6E0 /* SJCameraMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C95F021DDBD350052F6E0 /* SJCameraMaskView.m */; };
 		04A351F521D7096900A7F6C6 /* OTResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A351F421D7096900A7F6C6 /* OTResultView.m */; };
 		04A7EA6B21B777A8000A74D0 /* OTRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7EA6A21B777A8000A74D0 /* OTRecordModel.m */; };
 		04BE51B621BA4A630035294C /* SJFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE51B521BA4A630035294C /* SJFileUtil.m */; };
@@ -123,7 +126,6 @@
 		0433D1CE21D37C510053A968 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		043576D721D0879600B0BA7C /* SJADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJADView.h; sourceTree = "<group>"; };
 		043576D821D0879600B0BA7C /* SJADView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJADView.m; sourceTree = "<group>"; };
-		044B667321B61A3D00D681BD /* bannerAdIds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bannerAdIds.plist; sourceTree = "<group>"; };
 		044B667621B61A6500D681BD /* SJAdsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAdsUtil.h; sourceTree = "<group>"; };
 		044B667721B61A6500D681BD /* SJAdsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAdsUtil.m; sourceTree = "<group>"; };
 		044B667B21B61A8300D681BD /* SJLaunchADController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJLaunchADController.h; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 		046237CA21D077D900BEA3AC /* UIImage+SJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SJCategory.h"; sourceTree = "<group>"; };
 		046237CD21D0816300BEA3AC /* HYKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYKeychain.h; sourceTree = "<group>"; };
 		046237CE21D0816300BEA3AC /* HYKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYKeychain.m; sourceTree = "<group>"; };
+		047C95E221DDA0C40052F6E0 /* SJCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCameraController.h; sourceTree = "<group>"; };
+		047C95E321DDA0C40052F6E0 /* SJCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCameraController.m; sourceTree = "<group>"; };
+		047C95E921DDA4C50052F6E0 /* OCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNavigationController.h; sourceTree = "<group>"; };
+		047C95EA21DDA4C50052F6E0 /* OCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNavigationController.m; sourceTree = "<group>"; };
+		047C95EB21DDA4C50052F6E0 /* OCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTabBarController.h; sourceTree = "<group>"; };
+		047C95EC21DDA4C50052F6E0 /* OCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTabBarController.m; sourceTree = "<group>"; };
+		047C95EF21DDBD350052F6E0 /* SJCameraMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJCameraMaskView.h; sourceTree = "<group>"; };
+		047C95F021DDBD350052F6E0 /* SJCameraMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJCameraMaskView.m; sourceTree = "<group>"; };
 		04A351F321D7096900A7F6C6 /* OTResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTResultView.h; sourceTree = "<group>"; };
 		04A351F421D7096900A7F6C6 /* OTResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTResultView.m; sourceTree = "<group>"; };
 		04A7EA6921B777A8000A74D0 /* OTRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTRecordModel.h; sourceTree = "<group>"; };
@@ -444,6 +454,33 @@
 			path = HYKeychain;
 			sourceTree = "<group>";
 		};
+		047C95E021DDA0C40052F6E0 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				047C95E121DDA0C40052F6E0 /* Controllers */,
+				047C95E421DDA0C40052F6E0 /* Views */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		047C95E121DDA0C40052F6E0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				047C95E221DDA0C40052F6E0 /* SJCameraController.h */,
+				047C95E321DDA0C40052F6E0 /* SJCameraController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		047C95E421DDA0C40052F6E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047C95EF21DDBD350052F6E0 /* SJCameraMaskView.h */,
+				047C95F021DDBD350052F6E0 /* SJCameraMaskView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04BE51B321BA4A4B0035294C /* SJFileUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +601,7 @@
 		4B518C8B21869EAF0069EE8F /* General */ = {
 			isa = PBXGroup;
 			children = (
+				047C95E021DDA0C40052F6E0 /* Camera */,
 				044B669B21B6265800D681BD /* Recognition<识别过程> */,
 				044B668221B61BBF00D681BD /* Record<识别记录> */,
 				044B667921B61A8300D681BD /* ADLaunch<启动广告> */,
@@ -612,6 +650,10 @@
 		4B518C922186B9F10069EE8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				047C95E921DDA4C50052F6E0 /* OCNavigationController.h */,
+				047C95EA21DDA4C50052F6E0 /* OCNavigationController.m */,
+				047C95EB21DDA4C50052F6E0 /* OCTabBarController.h */,
+				047C95EC21DDA4C50052F6E0 /* OCTabBarController.m */,
 				4B454D3821AC2A6F008C9DEF /* SJWebViewController.h */,
 				4B454D3721AC2A6F008C9DEF /* SJWebViewController.m */,
 				4B518C932186BA040069EE8F /* SJViewController.h */,
@@ -652,7 +694,6 @@
 			children = (
 				4B1BFF0A21C422A70054EFBA /* 识别失败.png */,
 				044B66A421B64A0600D681BD /* 识别中.gif */,
-				044B667321B61A3D00D681BD /* bannerAdIds.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -945,7 +986,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044B667421B61A3E00D681BD /* bannerAdIds.plist in Resources */,
 				0433D1CF21D37C510053A968 /* readme.md in Resources */,
 				4B518C6621869E590069EE8F /* LaunchScreen.storyboard in Resources */,
 				4B518CB12186C8840069EE8F /* SJCollectionViewCell.xib in Resources */,
@@ -999,16 +1039,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OCRTool/Pods-OCRTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1060,6 +1108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9131822187092600580F95 /* SJTableViewCell.m in Sources */,
+				047C95ED21DDA4C60052F6E0 /* OCNavigationController.m in Sources */,
 				4BBD016921A2EE2200413B14 /* OTResultController.m in Sources */,
 				04BE51C221BA503B0035294C /* OTRecordCoreDataUtil.m in Sources */,
 				046237CB21D077D900BEA3AC /* UIImage+SJCategory.m in Sources */,
@@ -1067,6 +1116,7 @@
 				4B454D3921AC2A6F008C9DEF /* SJWebViewController.m in Sources */,
 				044B66A321B629D900D681BD /* OTRecognitionAdLoadView.m in Sources */,
 				4B518CB02186C8840069EE8F /* SJCollectionViewCell.m in Sources */,
+				047C95EE21DDA4C60052F6E0 /* OCTabBarController.m in Sources */,
 				046237CF21D0816300BEA3AC /* HYKeychain.m in Sources */,
 				4B7A567721913EA800035EF2 /* SJColorUtil.m in Sources */,
 				044B669221B61BDE00D681BD /* OTRecordAdModel.m in Sources */,
@@ -1099,10 +1149,12 @@
 				4B518C9B2186BCAF0069EE8F /* SJViewModel.m in Sources */,
 				046237C621D077BF00BEA3AC /* UIColor+HSV.m in Sources */,
 				4B454D5021AC2B96008C9DEF /* SJCustomAlertController.m in Sources */,
+				047C95E721DDA0C40052F6E0 /* SJCameraController.m in Sources */,
 				4B518C5B21869E590069EE8F /* AppDelegate.m in Sources */,
 				4B6A539A21B8185D00715454 /* SJInputToolBar.m in Sources */,
 				4B454D5E21AC3D51008C9DEF /* SJCoreDataUtil.m in Sources */,
 				4B7A567D2191565200035EF2 /* OTHomeMenuModel.m in Sources */,
+				047C95F121DDBD350052F6E0 /* SJCameraMaskView.m in Sources */,
 				044B669721B61BDE00D681BD /* OTRecordController.m in Sources */,
 				4B1BCE21219DB19400FC0DA8 /* SJView.m in Sources */,
 			);

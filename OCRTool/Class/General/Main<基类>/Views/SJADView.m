@@ -54,8 +54,8 @@
     self.adView.rootViewController = adController;
     self.adView.delegate = self;
     self.adView.adUnitID = [SJAdsUtil lanuchAdId];
-    GADRequest *request = [GADRequest request];
-    [self.adView loadRequest:request];
+//    GADRequest *request = [GADRequest request];
+//    [self.adView loadRequest:request];
 }
 
 

@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
     SJLanuchAdView *adView = [[SJLanuchAdView alloc] initWithFrame:CGRectZero];
     adView.delegate = self;
     adView.controller = self;
@@ -31,7 +31,6 @@
     [adView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.view);
     }];
-    
     self.adView = adView;
 }
 

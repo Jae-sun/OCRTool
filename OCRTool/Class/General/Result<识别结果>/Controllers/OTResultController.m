@@ -37,12 +37,12 @@
     self.resultView.adController = self;
     [self.view addSubview:self.resultView];
     [self.resultView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(weakSelf.view).insets(UIEdgeInsetsMake(kHeightForNavBarAndStatusBar, 0, 0, 0));
+        make.edges.equalTo(weakSelf.view);
     }];
     SJInputToolBar *toolBar = [[SJInputToolBar alloc] init];
     self.resultView.textView.inputAccessoryView = toolBar;
     toolBar.delegate = self;
-    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
+    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"white_back"] eventHandler:^{
         if (self.result) {
             [weakSelf.navigationController popToRootViewControllerAnimated:YES];
         }
@@ -50,7 +50,7 @@
             [weakSelf.navigationController popViewControllerAnimated:YES];
         }
     }];
-    self.navigationItem.rightBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"分享"] eventHandler:^{
+    self.navigationItem.rightBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"white_share"] eventHandler:^{
         [self.resultView resignFirstResponder];
         CGFloat height = [UIScreen mainScreen].bounds.size.width / 3.0f * 2 + 54.f;
         SJShareAlertView *alertView = [[SJShareAlertView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];

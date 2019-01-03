@@ -32,10 +32,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"历史记录";
-    SJWeakSelf;
-    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
-        [weakSelf.navigationController popViewControllerAnimated:YES];
-    }];
+//    SJWeakSelf;
+//    self.navigationItem.leftBarButtonItem = [ZZJBlockBarButtonItem blockedBarButtonItemWithImage:[UIImage imageNamed:@"black_back"] eventHandler:^{
+//        [weakSelf.navigationController popViewControllerAnimated:YES];
+//    }];
 
     [self configSubviews];
     [self configDatas];
@@ -81,10 +81,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    OTRecordModel *model = self.datas[indexPath.row];
+    NSInteger index = self.datas.count - indexPath.row - 1;
+    OTRecordModel *model = self.datas[index];
     if (model.recordID) {
         OTRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OTRecordCell" forIndexPath:indexPath];
-        OTRecord *record = self.datas[indexPath.row];
+        OTRecord *record = self.datas[index];
         OTRecordModel *model = [OTRecordModel modelWithRecord:record];
         [cell setModel:model];
         return cell;
@@ -93,9 +94,7 @@
         OTRecordAdCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OTRecordAdCell" forIndexPath:indexPath];
         OTRecordAdModel *model = [[OTRecordAdModel alloc] init];
         model.rootViewController = self;
-        NSArray *adIds = [SJAdsUtil bannerAdIds];
-        NSInteger index = indexPath.section % adIds.count;
-        model.adUnitID = adIds[index];
+        model.adUnitID =  [SJAdsUtil bannerAdID];
         [cell setModel:model];
         return cell;
     }
@@ -107,7 +106,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-     OTRecordModel *model = self.datas[indexPath.row];
+    NSInteger index = self.datas.count - indexPath.row - 1;
+    OTRecordModel *model = self.datas[index];
     if (model.recordID) {
         OTResultController *vc = [[OTResultController alloc] init];
         vc.recordModel = model;
@@ -132,12 +132,14 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    OTRecordModel *model = self.datas[indexPath.row];
+    NSInteger index = self.datas.count - indexPath.row - 1;
+    OTRecordModel *model = self.datas[index];
     return model.recordID;
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    OTRecordModel *model = self.datas[indexPath.row];
+    NSInteger index = self.datas.count - indexPath.row - 1;
+    OTRecordModel *model = self.datas[index];
     if (model.recordID) {
         UITableViewRowAction *layTopRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
             NSLog(@"删除");

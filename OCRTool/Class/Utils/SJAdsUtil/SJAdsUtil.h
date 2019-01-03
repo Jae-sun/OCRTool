@@ -11,15 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SJAdsUtil : NSObject
-
-// 获取所有横幅广告的id
-+ (NSArray *)bannerAdIds;
-// 随机横幅广告
-+ (NSString *)randomBannerAdId;
-
+// 横幅广告
++ (NSString *)bannerAdID;
 // 启动页广告
 + (NSString *)lanuchAdId;
-
 // 识别结果页插屏广告
 + (NSString *)resultInterstitialAdId;
 

@@ -24,7 +24,7 @@ target 'OCRTool' do
   
   pod 'ReactiveObjC' # 函数式编程
   pod 'YTKNetwork'   # 猿题库网络封装框架
-  
+  pod 'TOCropViewController'
   target 'OCRToolTests' do
     inherit! :search_paths
     # Pods for testing

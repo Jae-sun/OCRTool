@@ -50,10 +50,11 @@
         make.edges.equalTo(self);
     }];
     
-    CGFloat top = (kScreenHeight - height * 3 - 31) * 0.5f;
+    CGFloat top = (kScreenHeight - height * 3 - 31) * 0.5f + 20;
+    CGFloat bottom = (kScreenHeight - height * 3 - 31) * 0.5f - 20;
     CGFloat left = (kScreenWidth - width * 2 - 12) * 0.5f;
     [self.collectonView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).insets(UIEdgeInsetsMake(top, left, top, left));
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(top, left, bottom, left));
     }];
 }
 

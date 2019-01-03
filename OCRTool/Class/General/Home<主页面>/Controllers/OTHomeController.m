@@ -10,6 +10,7 @@
 
 #import "OTRecognitionController.h" // 识别过程
 #import "OTRecordController.h"      // 历史记录
+#import "SJCameraController.h"
 
 #import "OTHomeView.h"
 #import "OTHomeCollectionCell.h"
@@ -22,27 +23,24 @@
 
 @property (nonatomic, strong) OTHomeViewModel *viewModel;
 
-/**  **/
 @property (nonatomic, strong) UIViewController *presentedController;
 
 @end
 
-@implementation OTHomeController 
+@implementation OTHomeController
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor clearColor]]];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"欢迎使用智能文字识别";
+    self.title = @"";
     [self.viewModel configDatas];
     [self configSubviews];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"欢迎使用AI文字识别" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStylePlain target:self action:nil];
 }
 
 - (void)configSubviews {
@@ -109,12 +107,15 @@
 
 // 普通文字识别
 - (void)generalOCR {
-    SJWeakSelf;
-    self.presentedController = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
-        // 在这个block里，image即为切好的图片，可自行选择如何处理
-        [weakSelf handlerWithImg:image type:0];
-    }];
-    [self presentViewController:self.presentedController animated:YES completion:nil];
+    SJCameraController *vc = [[SJCameraController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+//
+//    SJWeakSelf;
+//    self.presentedController = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+//        // 在这个block里，image即为切好的图片，可自行选择如何处理
+//        [weakSelf handlerWithImg:image type:0];
+//    }];
+//    [self presentViewController:self.presentedController animated:YES completion:nil];
 }
 
 // 精确识别文字

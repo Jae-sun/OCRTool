@@ -67,7 +67,7 @@
 - (void)updateRootControllerWithLaunchedAd:(BOOL)LaunchedAd {
     if (LaunchedAd) {
         OTHomeController *homeVC = [[OTHomeController alloc] init];
-        UINavigationController *rootNavC = [[UINavigationController alloc] initWithRootViewController:homeVC];
+        OCNavigationController *rootNavC = [[OCNavigationController alloc] initWithRootViewController:homeVC];
         self.window.rootViewController = rootNavC;
         [self.window makeKeyAndVisible];
     }

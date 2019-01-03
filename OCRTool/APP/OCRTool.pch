@@ -23,6 +23,9 @@
 // weakSelf
 #define SJWeakSelf __weak typeof(self) weakSelf = self;
 
+//
+#import "OCNavigationController.h"
+
 // Category
 #import "UIColor+Expanded.h"
 #import "UIColor+HSV.h"

@@ -12,6 +12,7 @@
 
 + (UIColor *)themColor {
     return [UIColor colorWithHexString:@"1551e5"];
+//    1a98fc
 }
 
 @end

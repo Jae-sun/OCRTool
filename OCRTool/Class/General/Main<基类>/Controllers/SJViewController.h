@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^NavBarItemHander)(void);
 @interface SJViewController : UIViewController
+
+- (void)leftBarButtonItemWithImageName:(NSString *)imgName handler:(NavBarItemHander)handler;
 
 @end

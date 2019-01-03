@@ -10,17 +10,9 @@
 
 @implementation SJAdsUtil
 
-// 列表横幅广告
-+ (NSArray *)bannerAdIds {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"bannerAdIds" ofType:@"plist"];
-    NSArray *adIds = [NSArray arrayWithContentsOfFile:path];
-    return adIds;
-}
-// 随机横幅广告
-+ (NSString *)randomBannerAdId {
-    NSArray *adIds = [self bannerAdIds];
-    NSInteger index = arc4random()%adIds.count;
-    return adIds[index];
+// 横幅广告
++ (NSString *)bannerAdID {
+    return @"ca-app-pub-6278538217166206/2841577180";
 }
 // 启动页广告
 + (NSString *)lanuchAdId {

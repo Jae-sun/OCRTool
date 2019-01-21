@@ -23,4 +23,9 @@
 + (NSString *)resultInterstitialAdId {
     return @"ca-app-pub-6278538217166206/7708689238";
 }
+
++ (NSString *)commonAdId {
+    return @"ca-app-pub-6278538217166206/4965077950";
+}
+
 @end
